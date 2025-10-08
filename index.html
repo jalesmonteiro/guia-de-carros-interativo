@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparativo de Carros 0km</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: auto;
+            height: 400px;
+        }
+        .version-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .version-card.selected {
+            box-shadow: 0 0 0 2px var(--checkbox-color, #a7a7a7);
+            transform: translateY(-2px);
+        }
+        .custom-checkbox {
+            appearance: none;
+            width: 1.5em;
+            height: 1.5em;
+            border: 2px solid var(--checkbox-color, #d1d5db);
+            border-radius: 0.375rem;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s;
+        }
+        .custom-checkbox:checked {
+            background-color: var(--checkbox-color, #3B82F6);
+            border-color: var(--checkbox-color, #3B82F6);
+        }
+        .custom-checkbox:checked::after {
+            content: '✔';
+            position: absolute;
+            color: white;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.9em;
+        }
+        /* Estilos do Modal */
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+            max-height: 85vh;
+        }
+        .details-link {
+            text-decoration: underline;
+            font-size: 0.875rem;
+            color: #4B5563;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .details-link:hover {
+            color: #1F2937;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">Comparativo de Carros</h1>
+            <p class="text-gray-600 mt-2">Selecione as versões abaixo para comparar seus atributos no gráfico.</p>
+        </header>
+
+        <main>
+            <section id="interactive-chart" class="mb-10 bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold text-center mb-4">Comparativo Rápido</h2>
+                <div class="chart-container">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+            </section>
+            
+            <section id="specific-comparison-section">
+                <div id="car-columns-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- As colunas dos carros serão injetadas aqui pelo JavaScript -->
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Modal para Detalhes -->
+    <div id="details-modal" class="modal fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center p-4 z-50 opacity-0">
+        <div class="modal-content bg-white rounded-lg shadow-2xl w-full max-w-3xl transform scale-95">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 id="modal-title" class="text-xl font-bold">Detalhes do Veículo</h3>
+                <button id="close-modal-btn" class="text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            </div>
+            <div id="modal-body" class="p-6 overflow-y-auto"></div>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const comparisonData = [
+                // VW Gol G5
+                { id: 'gol-g5', model: 'VW Gol G5 (2008)', version: '1.0 VHT (Valor Corrigido)', price: '~ R$ 77.700', details: { 'Motor': '1.0 de 76 cv', 'Consumo (G)': '12.1 km/l', 'Porta-malas': '285 L', 'Itens de Série': 'Básico (sem ar ou direção hidráulica de série)' }, scores: { desempenho: 4, consumo: 7, seguranca: 2, conforto: 3, tecnologia: 1 }, color: '#6B7280', fullDetails: { desempenho: { 'Motor e Potência': '1.0 VHT, 4 cilindros, 8 válvulas', 'Potência máxima (cv)': '76 (E) / 72 (G) @ 5.750 rpm', 'Torque (kgf.m)': '10,6 (E) / 9,7 (G) @ 4.250 rpm', 'Tipo de alimentação': 'Aspirado', 'Transmissão': 'Manual de 5 marchas', 'Aceleração 0-100 km/h': '12,9 s', 'Velocidade máxima': '169 km/h' }, consumo: { 'Urbano (km/l)': '8,8 (E) / 12,1 (G)', 'Rodoviário (km/l)': '10,9 (E) / 14,3 (G)', 'Capacidade do tanque': '55 L', 'Peso do veículo': '944 kg' }, tecnologia: { 'Conectividade': 'Rádio simples (opcional)', 'Sistemas Eletrônicos': 'Arquitetura distribuída (ECUs múltiplas)' }, conforto: { 'Entre-eixos': '2,46 m', 'Porta-malas (VDA)': '285 L', 'Ajustes do banco': 'Manual (distância e inclinação)', 'Capacidade': '5 passageiros' }, seguranca: { 'Sistemas Obrigatórios': 'Freios a disco (D) e tambor (T). ABS opcional em anos posteriores.', 'Airbags': 'Não disponíveis de série', 'Estrutura da carroceria': 'Aço convencional com zonas de deformação programada', 'Certificações de Segurança': 'Não avaliado pelo Latin NCAP na época' } } },
+                // Fiat Argo
+                { id: 'argo-1-0', model: 'Fiat Argo (0km)', version: '1.0', price: 'R$ 83.490', details: { 'Motor': '1.0 Firefly de 75 cv', 'Consumo (G)': '13.4 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Ar, direção elétrica, vidros diant. elétricos, computador de bordo' }, scores: { desempenho: 5, consumo: 9, seguranca: 5, conforto: 6, tecnologia: 5 }, color: '#1D4ED8', fullDetails: { desempenho: { 'Motor e Potência': '1.0 Firefly, 3 cilindros', 'Potência máxima (cv)': '75 (E) / 71 (G) @ 6.000 rpm', 'Torque (kgf.m)': '10,7 (E) / 10,0 (G) @ 3.250 rpm', 'Transmissão': 'Manual de 5 marchas', 'Aceleração 0-100 km/h': '13,4 s' }, consumo: { 'Urbano (km/l)': '9,6 (E) / 13,4 (G)', 'Rodoviário (km/l)': '10,6 (E) / 14,7 (G)', 'Eficiência energética': '1,49 MJ/km', 'Peso do veículo': '1.105 kg' }, tecnologia: { 'Conectividade': 'Apenas preparação para rádio', 'Sistemas Eletrônicos': 'Computador de bordo' }, conforto: { 'Entre-eixos': '2,52 m', 'Porta-malas (VDA)': '300 L', 'Capacidade': '5 passageiros' }, seguranca: { 'Sistemas Obrigatórios': '2 Airbags frontais, Freios ABS com EBD, ESC, ISOFIX', 'Sistemas Complementares': 'Assistente de partida em rampa (HSA)', 'Certificações de Segurança': '0 estrelas (Latin NCAP - protocolo 2021)' } } },
+                { id: 'argo-drive-1-0', model: 'Fiat Argo (0km)', version: 'Drive 1.0', price: 'R$ 86.490', details: { 'Motor': '1.0 Firefly de 75 cv', 'Consumo (G)': '13.4 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Adiciona multimídia 7", volante multifuncional, USB traseiro' }, scores: { desempenho: 5, consumo: 9, seguranca: 5, conforto: 7, tecnologia: 7 }, color: '#2563EB', fullDetails: { desempenho: { 'Motor e Potência': '1.0 Firefly, 3 cilindros', 'Potência máxima (cv)': '75 (E) / 71 (G) @ 6.000 rpm', 'Torque (kgf.m)': '10,7 (E) / 10,0 (G) @ 3.250 rpm', 'Transmissão': 'Manual de 5 marchas' }, consumo: { 'Urbano (km/l)': '9,6 (E) / 13,4 (G)', 'Eficiência energética': '1,49 MJ/km', 'Peso': '1.105 kg' }, tecnologia: { 'Conectividade': 'Uconnect 7" com Apple CarPlay/Android Auto', 'Câmeras': 'Sensor de estacionamento traseiro' }, conforto: { 'Entre-eixos': '2,52 m', 'Porta-malas (VDA)': '300 L' }, seguranca: { 'Sistemas Obrigatórios': '2 Airbags, ABS, ESC, ISOFIX', 'Sistemas Complementares': 'HSA', 'Certificações de Segurança': '0 estrelas (Latin NCAP - protocolo 2021)' } } },
+                { id: 'argo-trekking-1-3', model: 'Fiat Argo (0km)', version: 'Trekking 1.3', price: 'R$ 94.990', details: { 'Motor': '1.3 Firefly de 107 cv', 'Consumo (G)': '12.6 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Visual aventureiro, suspensão elevada, pneus de uso misto' }, scores: { desempenho: 7, consumo: 8, seguranca: 6, conforto: 7, tecnologia: 7 }, color: '#3B82F6', fullDetails: { desempenho: { 'Motor e Potência': '1.3 Firefly, 4 cilindros', 'Potência máxima (cv)': '107 (E) / 98 (G) @ 6.250 rpm', 'Torque (kgf.m)': '13,7 (E) / 13,2 (G) @ 3.500 rpm', 'Transmissão': 'Manual de 5 marchas' }, consumo: { 'Urbano (km/l)': '9,1 (E) / 12,6 (G)', 'Eficiência energética': '1,62 MJ/km', 'Peso': '1.140 kg' }, tecnologia: { 'Conectividade': 'Uconnect 7"', 'Câmeras': 'Câmera de ré' }, conforto: { 'Adicionais': 'Suspensão elevada, maior altura do solo' }, seguranca: { 'Sistemas Obrigatórios': '2 Airbags, ABS, ESC, ISOFIX', 'Sistemas Complementares': 'HSA', 'Certificações de Segurança': '0 estrelas (Latin NCAP - protocolo 2021)' } } },
+                { id: 'argo-drive-1-3-at', model: 'Fiat Argo (0km)', version: 'Drive 1.3 AT', price: 'R$ 97.990', details: { 'Motor': '1.3 Firefly de 107 cv', 'Consumo (G)': '12.4 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Câmbio CVT, piloto automático, controle de estabilidade' }, scores: { desempenho: 7, consumo: 8, seguranca: 7, conforto: 8, tecnologia: 7 }, color: '#60A5FA', fullDetails: { desempenho: { 'Motor e Potência': '1.3 Firefly, 4 cilindros', 'Potência máxima (cv)': '107 (E) / 98 (G) @ 6.250 rpm', 'Transmissão': 'CVT de 7 marchas (simuladas)' }, consumo: { 'Urbano (km/l)': '8,9 (E) / 12,4 (G)', 'Eficiência energética': '1,63 MJ/km', 'Peso': '1.181 kg' }, tecnologia: { 'Sistemas de Assistência (ADAS)': 'Controle de cruzeiro (piloto automático)' }, conforto: { 'Adicionais': 'Apoia braço para motorista' }, seguranca: { 'Sistemas Obrigatórios': '2 Airbags, ABS, ESC, ISOFIX', 'Sistemas Complementares': 'HSA, Controle de Tração (TC+)', 'Certificações de Segurança': '0 estrelas (Latin NCAP - protocolo 2021)' } } },
+                { id: 'argo-trekking-1-3-at', model: 'Fiat Argo (0km)', version: 'Trekking 1.3 AT', price: 'R$ 100.990', details: { 'Motor': '1.3 Firefly de 107 cv', 'Consumo (G)': '12.4 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Visual aventureiro + Câmbio CVT' }, scores: { desempenho: 7, consumo: 8, seguranca: 7, conforto: 8, tecnologia: 8 }, color: '#93C5FD', fullDetails: { desempenho: { 'Motor e Potência': '1.3 Firefly, 4 cilindros', 'Potência máxima (cv)': '107 (E) / 98 (G) @ 6.250 rpm', 'Transmissão': 'CVT de 7 marchas (simuladas)' }, consumo: { 'Urbano (km/l)': '8,9 (E) / 12,4 (G)', 'Eficiência energética': '1,63 MJ/km', 'Peso': '1.181 kg' }, tecnologia: { 'Sistemas de Assistência (ADAS)': 'Controle de cruzeiro' }, conforto: { 'Adicionais': 'Suspensão elevada' }, seguranca: { 'Sistemas Obrigatórios': '2 Airbags, ABS, ESC, ISOFIX', 'Sistemas Complementares': 'HSA, TC+', 'Certificações de Segurança': '0 estrelas (Latin NCAP - protocolo 2021)' } } },
+                // Hyundai HB20
+                { id: 'hb20-sense-plus', model: 'Hyundai HB20 (0km)', version: 'Sense Plus 1.0', price: 'R$ 86.090', details: { 'Motor': '1.0 Kappa de 80 cv', 'Consumo (G)': '13.1 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Ar, direção elétrica, 6 airbags, rádio com Bluetooth' }, scores: { desempenho: 6, consumo: 9, seguranca: 8, conforto: 6, tecnologia: 5 }, color: '#047857', fullDetails: { desempenho: { 'Motor e Potência': '1.0 Kappa, 3 cilindros', 'Potência máxima (cv)': '80 (E) / 75 (G) @ 6.000 rpm', 'Torque (kgf.m)': '10,2 (E) / 9,4 (G) @ 4.500 rpm', 'Transmissão': 'Manual de 5 marchas' }, consumo: { 'Urbano (km/l)': '9,1 (E) / 13,1 (G)', 'Eficiência energética': '1,54 MJ/km', 'Peso': '1.020 kg' }, tecnologia: { 'Conectividade': 'Rádio com Bluetooth e USB' }, conforto: { 'Entre-eixos': '2,53 m', 'Porta-malas (VDA)': '300 L' }, seguranca: { 'Sistemas Obrigatórios': '6 Airbags (frontais, laterais, cortina), ABS, ESC, ISOFIX', 'Sistemas Complementares': 'HSA', 'Certificações de Segurança': '3 estrelas (Latin NCAP - protocolo 2024)' } } },
+                { id: 'hb20-comfort-plus', model: 'Hyundai HB20 (0km)', version: 'Comfort Plus 1.0', price: 'R$ 89.490', details: { 'Motor': '1.0 Kappa de 80 cv', 'Consumo (G)': '13.1 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Adiciona multimídia 8", vidros elétricos traseiros, retrovisores elétricos' }, scores: { desempenho: 6, consumo: 9, seguranca: 8, conforto: 7, tecnologia: 7 }, color: '#10B981', fullDetails: { desempenho: { 'Motor e Potência': '1.0 Kappa, 3 cilindros', 'Potência máxima (cv)': '80 (E) / 75 (G) @ 6.000 rpm' }, consumo: { 'Urbano (km/l)': '9,1 (E) / 13,1 (G)', 'Eficiência energética': '1,54 MJ/km', 'Peso': '1.020 kg' }, tecnologia: { 'Conectividade': 'blueMedia 8" com Apple CarPlay/Android Auto sem fio' }, conforto: { 'Adicionais': 'Vidros elétricos traseiros' }, seguranca: { 'Sistemas Obrigatórios': '6 Airbags, ABS, ESC, ISOFIX', 'Sistemas Complementares': 'HSA', 'Certificações de Segurança': '3 estrelas (Latin NCAP - protocolo 2024)' } } },
+                { id: 'hb20-limited-plus', model: 'Hyundai HB20 (0km)', version: 'Limited Plus 1.0', price: 'R$ 93.090', details: { 'Motor': '1.0 Kappa de 80 cv', 'Consumo (G)': '13.1 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Adiciona painel digital, chave presencial, câmera de ré' }, scores: { desempenho: 6, consumo: 9, seguranca: 8, conforto: 8, tecnologia: 8 }, color: '#34D399', fullDetails: { desempenho: { 'Motor e Potência': '1.0 Kappa, 3 cilindros', 'Potência máxima (cv)': '80 (E) / 75 (G) @ 6.000 rpm' }, consumo: { 'Urbano (km/l)': '9,1 (E) / 13,1 (G)', 'Eficiência energética': '1,54 MJ/km', 'Peso': '1.020 kg' }, tecnologia: { 'Sistemas Eletrônicos': 'Painel de instrumentos digital, Chave presencial com partida por botão', 'Câmeras': 'Câmera de ré' }, conforto: { 'Adicionais': 'Abertura e fechamento dos vidros pela chave' }, seguranca: { 'Sistemas Obrigatórios': '6 Airbags, ABS, ESC, ISOFIX', 'Sistemas Complementares': 'HSA', 'Certificações de Segurança': '3 estrelas (Latin NCAP - protocolo 2024)' } } },
+                { id: 'hb20-comfort-turbo-at', model: 'Hyundai HB20 (0km)', version: 'Comfort Plus Turbo AT', price: 'R$ 109.490', details: { 'Motor': '1.0 T-GDI de 120 cv', 'Consumo (G)': '12.2 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Câmbio automático, piloto automático, rodas de liga leve' }, scores: { desempenho: 8, consumo: 8, seguranca: 8, conforto: 8, tecnologia: 7 }, color: '#6EE7B7', fullDetails: { desempenho: { 'Motor e Potência': '1.0 T-GDI, 3 cilindros', 'Potência máxima (cv)': '120 (E/G) @ 6.000 rpm', 'Torque (kgf.m)': '17,5 (E/G) @ 1.500 rpm', 'Transmissão': 'Automática de 6 marchas' }, consumo: { 'Urbano (km/l)': '8,6 (E) / 12,2 (G)', 'Eficiência energética': '1,68 MJ/km', 'Peso': '1.090 kg' }, tecnologia: { 'Sistemas de Assistência (ADAS)': 'Controle de cruzeiro' }, conforto: { 'Adicionais': 'Apoio de braço para motorista' }, seguranca: { 'Sistemas Obrigatórios': '6 Airbags, ABS, ESC, ISOFIX', 'Sistemas Complementares': 'HSA', 'Certificações de Segurança': '3 estrelas (Latin NCAP - protocolo 2024)' } } },
+                { id: 'hb20-platinum-at', model: 'Hyundai HB20 (0km)', version: 'Platinum Turbo AT', price: 'R$ 115.390', details: { 'Motor': '1.0 T-GDI de 120 cv', 'Consumo (G)': '12.2 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Adiciona Bluelink, faróis de neblina, volante em couro' }, scores: { desempenho: 8, consumo: 8, seguranca: 9, conforto: 9, tecnologia: 8 }, color: '#A7F3D0', fullDetails: { desempenho: { 'Motor e Potência': '1.0 T-GDI, 3 cilindros', 'Potência máxima (cv)': '120 (E/G) @ 6.000 rpm' }, consumo: { 'Urbano (km/l)': '8,6 (E) / 12,2 (G)', 'Eficiência energética': '1,68 MJ/km', 'Peso': '1.090 kg' }, tecnologia: { 'Conectividade': 'Sistema de conectividade Bluelink' }, conforto: { 'Materiais': 'Volante revestido em couro' }, seguranca: { 'Iluminação': 'Faróis de neblina', 'Sistemas Obrigatórios': '6 Airbags, ABS, ESC, ISOFIX', 'Certificações de Segurança': '3 estrelas (Latin NCAP - protocolo 2024)' } } },
+                { id: 'hb20-platinum-plus', model: 'Hyundai HB20 (0km)', version: 'Platinum Plus Turbo AT', price: 'R$ 123.590', details: { 'Motor': '1.0 T-GDI de 120 cv', 'Consumo (G)': '11.8 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Pacote ADAS (frenagem autônoma, assist. de faixa), painel digital' }, scores: { desempenho: 8, consumo: 8, seguranca: 10, conforto: 9, tecnologia: 9 }, color: '#D1FAE5', fullDetails: { desempenho: { 'Motor e Potência': '1.0 T-GDI, 3 cilindros', 'Potência máxima (cv)': '120 (E/G) @ 6.000 rpm' }, consumo: { 'Urbano (km/l)': '8,3 (E) / 11,8 (G)', 'Eficiência energética': '1,72 MJ/km', 'Peso': '1.110 kg' }, tecnologia: { 'Sistemas de Assistência (ADAS)': 'AEB, Assistente de permanência em faixa, Monitoramento de ponto cego, Alerta de tráfego cruzado traseiro' }, conforto: { 'Adicionais': 'Ar-condicionado digital' }, seguranca: { 'Sistemas Complementares': 'HSA, Monitoramento de pressão dos pneus (TPMS)', 'Certificações de Segurança': '3 estrelas (Latin NCAP - protocolo 2024)' } } },
+                // VW Polo
+                { id: 'polo-track', model: 'VW Polo (0km)', version: 'Track 1.0', price: 'R$ 89.290', details: { 'Motor': '1.0 MPI de 84 cv', 'Consumo (G)': '13.1 km/l', 'Porta-malas': '300 L', 'Itens de Série': '4 airbags, controle de estabilidade, rádio com Bluetooth' }, scores: { desempenho: 6, consumo: 9, seguranca: 7, conforto: 5, tecnologia: 4 }, color: '#5B21B6', fullDetails: { desempenho: { 'Motor e Potência': '1.0 MPI, 3 cilindros', 'Potência máxima (cv)': '84 (E) / 77 (G) @ 6.450 rpm', 'Torque (kgf.m)': '10,3 (E) / 9,6 (G) @ 3.000 rpm', 'Transmissão': 'Manual de 5 marchas' }, consumo: { 'Urbano (km/l)': '9,3 (E) / 13,1 (G)', 'Eficiência energética': '1,53 MJ/km', 'Peso': '1.054 kg' }, tecnologia: { 'Conectividade': 'Rádio "Media Plus II" com Bluetooth' }, conforto: { 'Entre-eixos': '2,56 m', 'Porta-malas (VDA)': '300 L' }, seguranca: { 'Sistemas Obrigatórios': '4 Airbags (frontais e laterais), ABS, ESC, ISOFIX', 'Sistemas Complementares': 'HSA', 'Estrutura da carroceria': 'Aço de alta resistência', 'Certificações de Segurança': '3 estrelas (Latin NCAP - protocolo 2022)' } } },
+                { id: 'polo-mpi', model: 'VW Polo (0km)', version: 'MPI 1.0', price: 'R$ 93.990', details: { 'Motor': '1.0 MPI de 84 cv', 'Consumo (G)': '13.1 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Adiciona faróis em LED, multimídia Composition Touch 6.5"' }, scores: { desempenho: 6, consumo: 9, seguranca: 7, conforto: 6, tecnologia: 6 }, color: '#7C3AED', fullDetails: { desempenho: { 'Motor e Potência': '1.0 MPI, 3 cilindros', 'Potência máxima (cv)': '84 (E) / 77 (G) @ 6.450 rpm' }, consumo: { 'Urbano (km/l)': '9,3 (E) / 13,1 (G)', 'Eficiência energética': '1,53 MJ/km', 'Peso': '1.070 kg' }, tecnologia: { 'Conectividade': 'Composition Touch 6.5" com Apple CarPlay/Android Auto' }, seguranca: { 'Iluminação': 'Faróis de LED com DRL', 'Sistemas Obrigatórios': '4 Airbags, ABS, ESC, ISOFIX', 'Certificações de Segurança': '3 estrelas (Latin NCAP - protocolo 2022)' } } },
+                { id: 'polo-comfortline', model: 'VW Polo (0km)', version: 'Comfortline TSI AT', price: 'R$ 114.990', details: { 'Motor': '1.0 TSI de 116 cv', 'Consumo (G)': '12.5 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Câmbio automático, piloto automático, painel digital 8", chave presencial' }, scores: { desempenho: 8, consumo: 8, seguranca: 8, conforto: 8, tecnologia: 8 }, color: '#8B5CF6', fullDetails: { desempenho: { 'Motor e Potência': '170 TSI, 1.0 Turbo', 'Potência máxima (cv)': '116 (E) / 109 (G) @ 5.000 rpm', 'Torque (kgf.m)': '16,8 (E/G) @ 1.750 rpm', 'Transmissão': 'Automática de 6 marchas' }, consumo: { 'Urbano (km/l)': '8,7 (E) / 12,5 (G)', 'Eficiência energética': '1,68 MJ/km', 'Peso': '1.174 kg' }, tecnologia: { 'Sistemas de Assistência (ADAS)': 'Controle de cruzeiro', 'Sistemas Eletrônicos': 'Painel digital 8", Chave presencial' }, seguranca: { 'Sistemas Obrigatórios': '4 Airbags, ABS, ESC, ISOFIX', 'Certificações de Segurança': '3 estrelas (Latin NCAP - protocolo 2022)' } } },
+                { id: 'polo-highline', model: 'VW Polo (0km)', version: 'Highline TSI AT', price: 'R$ 121.990', details: { 'Motor': '1.0 TSI de 116 cv', 'Consumo (G)': '12.5 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Painel digital 10.25", multimídia VW Play 10.1", ar digital, bancos em couro' }, scores: { desempenho: 8, consumo: 8, seguranca: 9, conforto: 9, tecnologia: 9 }, color: '#A78BFA', fullDetails: { desempenho: { 'Motor e Potência': '170 TSI, 1.0 Turbo', 'Potência máxima (cv)': '116 (E) / 109 (G) @ 5.000 rpm' }, consumo: { 'Urbano (km/l)': '8,7 (E) / 12,5 (G)', 'Eficiência energética': '1,68 MJ/km', 'Peso': '1.174 kg' }, tecnologia: { 'Conectividade': 'VW Play 10.1" sem fio', 'Sistemas Eletrônicos': 'Painel digital 10.25", Carregador de celular por indução' }, conforto: { 'Adicionais': 'Ar-condicionado digital Climatronic Touch', 'Materiais': 'Bancos em couro sintético' }, seguranca: { 'Sistemas Complementares': 'HSA, TPMS', 'Certificações de Segurança': '3 estrelas (Latin NCAP - protocolo 2022)' } } },
+                { id: 'polo-gts', model: 'VW Polo (0km)', version: 'GTS 250 TSI AT', price: 'R$ 151.490', details: { 'Motor': '1.4 Turbo de 150 cv', 'Consumo (G)': '11.6 km/l', 'Porta-malas': '300 L', 'Itens de Série': 'Visual esportivo, motor 1.4, seletor de modo de condução' }, scores: { desempenho: 10, consumo: 7, seguranca: 9, conforto: 9, tecnologia: 9 }, color: '#C4B5FD', fullDetails: { desempenho: { 'Motor e Potência': '250 TSI, 1.4 Turbo', 'Potência máxima (cv)': '150 (E/G) @ 4.500 rpm', 'Torque (kgf.m)': '25,5 (E/G) @ 1.500 rpm', 'Aceleração 0-100 km/h': '8,3 s' }, consumo: { 'Urbano (km/l)': '8,0 (E) / 11,6 (G)', 'Eficiência energética': '1,86 MJ/km', 'Peso': '1.294 kg' }, tecnologia: { 'Sistemas Eletrônicos': 'Seletor de modo de condução (Eco, Normal, Sport, Individual)' }, conforto: { 'Adicionais': 'Bancos dianteiros esportivos' }, seguranca: { 'Sistemas Complementares': 'Bloqueio eletrônico do diferencial (XDS+)', 'Certificações de Segurança': '3 estrelas (Latin NCAP - protocolo 2022)' } } }
+            ];
+
+            const carColumnsContainer = document.getElementById('car-columns-container');
+            let comparisonChart = null;
+            const modal = document.getElementById('details-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+
+            function renderCarColumns() {
+                const groupedByModel = comparisonData.reduce((acc, car) => {
+                    acc[car.model] = acc[car.model] || [];
+                    acc[car.model].push(car);
+                    return acc;
+                }, {});
+
+                let html = '';
+                for (const model in groupedByModel) {
+                    const cars = groupedByModel[model];
+                    const firstCar = cars[0];
+                    let versionsHtml = '';
+
+                    cars.forEach((car, index) => {
+                        const detailsHtml = Object.entries(car.details).map(([key, value]) => `<li><strong>${key}:</strong> ${value}</li>`).join('');
+                        
+                        // Define quais carros virão pré-selecionados
+                        const preSelectedIds = ['argo-drive-1-0', 'hb20-comfort-plus', 'polo-mpi'];
+                        const isChecked = preSelectedIds.includes(car.id);
+
+                        versionsHtml += `
+                            <div class="version-card p-4 rounded-lg border ${isChecked ? 'selected' : ''}" style="--checkbox-color: ${car.color};">
+                                <label for="${car.id}" class="flex items-start gap-3">
+                                    <input type="checkbox" id="${car.id}" data-id="${car.id}" class="custom-checkbox mt-1 flex-shrink-0" ${isChecked ? 'checked' : ''} style="--checkbox-color: ${car.color};">
+                                    <div class="flex-grow">
+                                        <h4 class="font-semibold leading-tight">${car.version}</h4>
+                                        <p class="text-lg font-bold" style="color: ${car.color};">${car.price}</p>
+                                        <ul class="text-sm text-gray-600 mt-2 space-y-1 list-none">${detailsHtml}</ul>
+                                        <div class="text-right mt-2">
+                                            <span class="details-link" data-id="${car.id}">Mais detalhes</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        `;
+                    });
+
+                    html += `
+                        <div class="bg-white p-5 rounded-lg shadow-md flex flex-col">
+                            <h3 class="text-xl font-bold mb-4" style="color: ${firstCar.color};">${model}</h3>
+                            <div class="space-y-4">${versionsHtml}</div>
+                        </div>
+                    `;
+                }
+                carColumnsContainer.innerHTML = html;
+            }
+
+            function showDetailsModal(carId) {
+                const car = comparisonData.find(c => c.id === carId);
+                if (!car) return;
+
+                modalTitle.textContent = `${car.model} - ${car.version}`;
+                
+                let bodyHtml = '<div class="space-y-6">';
+                const categories = { Desempenho: car.fullDetails.desempenho, Consumo: car.fullDetails.consumo, Tecnologia: car.fullDetails.tecnologia, Conforto: car.fullDetails.conforto, Segurança: car.fullDetails.seguranca };
+
+                for(const category in categories) {
+                    if (categories[category]) {
+                        bodyHtml += `<div><h4 class="text-lg font-bold text-gray-800 border-b pb-1 mb-2">${category}</h4><ul class="space-y-1 text-sm">`;
+                        for(const [key, value] of Object.entries(categories[category])) {
+                            bodyHtml += `<li><strong class="font-semibold text-gray-700">${key}:</strong> <span class="text-gray-600">${value}</span></li>`;
+                        }
+                        bodyHtml += '</ul></div>';
+                    }
+                }
+
+                bodyHtml += `<div><h4 class="text-lg font-bold text-gray-800 border-b pb-1 mb-2">Dicas Práticas para Avaliação</h4><p class="text-sm text-gray-600">Ao analisar as especificações, considere seu uso pretendido (urbano, rodoviário), perfil familiar, orçamento de manutenção e, mais importante, realize um teste prático. As especificações no papel nem sempre correspondem à experiência real ao dirigir.</p></div>`;
+
+                bodyHtml += '</div>';
+                modalBody.innerHTML = bodyHtml;
+                openModal();
+            }
+            
+            function openModal() {
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.querySelector('.modal-content').classList.remove('scale-95');
+                }, 10);
+            }
+
+            function closeModal() {
+                modal.classList.add('opacity-0');
+                modal.querySelector('.modal-content').classList.add('scale-95');
+                setTimeout(() => modal.classList.add('hidden'), 300);
+            }
+
+            function updateChart() {
+                const selectedIDs = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.dataset.id);
+                const selectedCars = comparisonData.filter(car => selectedIDs.includes(car.id));
+
+                const datasets = selectedCars.map(car => ({
+                    label: `${car.model.replace('(0km)','').replace('(2008)','')} ${car.version.split(' ')[0]}`,
+                    data: Object.values(car.scores),
+                    borderColor: car.color,
+                    backgroundColor: `${car.color}33`,
+                    pointBackgroundColor: car.color,
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: car.color,
+                    borderWidth: 2,
+                }));
+
+                if (comparisonChart) {
+                    comparisonChart.data.datasets = datasets;
+                    comparisonChart.update();
+                } else {
+                    const ctx = document.getElementById('comparisonChart').getContext('2d');
+                    comparisonChart = new Chart(ctx, {
+                        type: 'radar',
+                        data: {
+                            labels: ['Desempenho', 'Consumo', 'Segurança', 'Conforto', 'Tecnologia'],
+                            datasets: datasets
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: { r: { angleLines: { color: '#e5e7eb' }, grid: { color: '#e5e7eb' }, pointLabels: { font: { size: 12, weight: '500' }, color: '#4b5563' }, ticks: { beginAtZero: true, max: 10, stepSize: 2, backdropColor: '#ffffff' }}},
+                            plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, font: { size: 11 } } } }
+                        }
+                    });
+                }
+            }
+            
+            renderCarColumns();
+            updateChart();
+
+            carColumnsContainer.addEventListener('change', (e) => {
+                if(e.target.type === 'checkbox') {
+                    const card = e.target.closest('.version-card');
+                    card.classList.toggle('selected', e.target.checked);
+                    updateChart();
+                }
+            });
+            
+            carColumnsContainer.addEventListener('click', (e) => {
+                if(e.target.classList.contains('details-link')) {
+                    const carId = e.target.dataset.id;
+                    showDetailsModal(carId);
+                }
+            });
+
+            closeModalBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+        });
+    </script>
+</body>
+</html>
+
