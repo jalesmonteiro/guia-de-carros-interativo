@@ -1,7 +1,7 @@
 [
   {
     "id": "hb20-sense-plus",
-    "model": "Hyundai HB20 (0km)",
+    "model": "Hyundai HB20",
     "version": "Sense Plus 1.0",
     "price": "R$ 86.090",
     "color": "#047857",
@@ -68,7 +68,7 @@
   },
   {
     "id": "hb20-comfort-plus",
-    "model": "Hyundai HB20 (0km)",
+    "model": "Hyundai HB20",
     "version": "Comfort Plus 1.0",
     "price": "R$ 89.490",
     "color": "#10B981",
@@ -135,7 +135,7 @@
   },
   {
     "id": "hb20-limited-plus",
-    "model": "Hyundai HB20 (0km)",
+    "model": "Hyundai HB20",
     "version": "Limited Plus 1.0",
     "price": "R$ 93.090",
     "color": "#34D399",
@@ -202,7 +202,7 @@
   },
   {
     "id": "hb20-comfort-turbo-at",
-    "model": "Hyundai HB20 (0km)",
+    "model": "Hyundai HB20",
     "version": "Comfort Plus Turbo AT",
     "price": "R$ 109.490",
     "color": "#6EE7B7",
@@ -265,7 +265,7 @@
   },
   {
     "id": "hb20-platinum-at",
-    "model": "Hyundai HB20 (0km)",
+    "model": "Hyundai HB20",
     "version": "Platinum Turbo AT",
     "price": "R$ 115.390",
     "color": "#A7F3D0",
@@ -331,7 +331,7 @@
   },
   {
     "id": "hb20-platinum-plus",
-    "model": "Hyundai HB20 (0km)",
+    "model": "Hyundai HB20",
     "version": "Platinum Plus Turbo AT",
     "price": "R$ 123.590",
     "color": "#D1FAE5",

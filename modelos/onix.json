@@ -1,7 +1,7 @@
 [
     {
         "id": "onix-1-0",
-        "model": "Chevrolet Onix (0km)",
+        "model": "Chevrolet Onix",
         "version": "1.0",
         "price": "R$ 87.790",
         "color": "#DC2626",
@@ -67,7 +67,7 @@
     },
     {
         "id": "onix-lt-1-0",
-        "model": "Chevrolet Onix (0km)",
+        "model": "Chevrolet Onix",
         "version": "LT 1.0",
         "price": "R$ 95.050",
         "color": "#B91C1C",
@@ -132,7 +132,7 @@
     },
     {
         "id": "onix-100-anos-turbo-at",
-        "model": "Chevrolet Onix (0km)",
+        "model": "Chevrolet Onix",
         "version": "100 Anos Turbo AT",
         "price": "R$ 125.590",
         "color": "#991B1B",

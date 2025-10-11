@@ -1,7 +1,7 @@
 [
     {
         "id": "polo-track",
-        "model": "VW Polo (0km)",
+        "model": "VW Polo",
         "version": "Track 1.0",
         "price": "R$ 89.290",
         "color": "#5B21B6",
@@ -67,7 +67,7 @@
     },
     {
         "id": "polo-mpi",
-        "model": "VW Polo (0km)",
+        "model": "VW Polo",
         "version": "MPI 1.0",
         "price": "R$ 93.990",
         "color": "#7C3AED",
@@ -132,7 +132,7 @@
     },
     {
         "id": "polo-comfortline",
-        "model": "VW Polo (0km)",
+        "model": "VW Polo",
         "version": "Comfortline TSI AT",
         "price": "R$ 114.990",
         "color": "#8B5CF6",

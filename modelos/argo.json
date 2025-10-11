@@ -1,7 +1,7 @@
 [
   {
     "id": "argo-drive-1-0",
-    "model": "Fiat Argo (0km)",
+    "model": "Fiat Argo",
     "version": "Drive 1.0",
     "price": "R$ 86.490",
     "color": "#2563EB",
@@ -71,7 +71,7 @@
   },
   {
     "id": "argo-trekking-1-3",
-    "model": "Fiat Argo (0km)",
+    "model": "Fiat Argo",
     "version": "Trekking 1.3",
     "price": "R$ 94.990",
     "color": "#3B82F6",
