@@ -1,306 +1,396 @@
 [
-    {
-        "id": "hb20-sense-plus",
-        "model": "Hyundai HB20 (0km)",
-        "version": "Sense Plus 1.0",
-        "price": "R$ 86.090",
-        "details": {
-            "Motor": "1.0 Kappa de 80 cv",
-            "Consumo (G)": "13.1 km/l",
-            "Porta-malas": "300 L",
-            "Itens de Série": "Ar, direção elétrica, 6 airbags, rádio com Bluetooth"
-        },
-        "scores": {
-            "desempenho": 6,
-            "consumo": 9,
-            "seguranca": 8,
-            "conforto": 6,
-            "tecnologia": 5
-        },
-        "color": "#047857",
-        "fullDetails": {
-            "desempenho": {
-                "Motor e Potência": "1.0 Kappa, 3 cilindros",
-                "Potência máxima (cv)": "80 (E) / 75 (G) @ 6.000 rpm",
-                "Torque (kgf.m)": "10,2 (E) / 9,4 (G) @ 4.500 rpm",
-                "Transmissão": "Manual de 5 marchas"
-            },
-            "consumo": {
-                "Urbano (km/l)": "9,1 (E) / 13,1 (G)",
-                "Eficiência energética": "1,54 MJ/km",
-                "Peso": "1.020 kg"
-            },
-            "dimensoes": {
-                "Comprimento": "4.015 mm",
-                "Largura": "1.720 mm",
-                "Altura": "1.470 mm",
-                "Entre-eixos": "2.530 mm",
-                "Porta-malas (VDA)": "300 L",
-                "Altura livre do solo": "160 mm"
-            },
-            "tecnologia": {
-                "Conectividade": "Rádio com Bluetooth e USB"
-            },
-            "conforto": {
-                "Adicionais": "Ar-condicionado"
-            },
-            "seguranca": {
-                "Sistemas Obrigatórios": "6 Airbags (frontais, laterais, cortina), ABS, ESC, ISOFIX",
-                "Sistemas Complementares": "HSA",
-                "Certificações de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
-            }
-        }
+  {
+    "id": "hb20-sense-plus",
+    "model": "Hyundai HB20 (0km)",
+    "version": "Sense Plus 1.0",
+    "price": "R$ 86.090",
+    "color": "#047857",
+    "details": {
+      "Motor": "1.0 Kappa de 80 cv",
+      "Segurança": "6 Airbags, Controle de Estabilidade (ESC)",
+      "Porta-malas": "300 L",
+      "Destaques": "Pacote de segurança de série"
     },
-    {
-        "id": "hb20-comfort-plus",
-        "model": "Hyundai HB20 (0km)",
-        "version": "Comfort Plus 1.0",
-        "price": "R$ 89.490",
-        "details": {
-            "Motor": "1.0 Kappa de 80 cv",
-            "Consumo (G)": "13.1 km/l",
-            "Porta-malas": "300 L",
-            "Itens de Série": "Adiciona multimídia 8\", vidros elétricos traseiros, retrovisores elétricos"
-        },
-        "scores": {
-            "desempenho": 6,
-            "consumo": 9,
-            "seguranca": 8,
-            "conforto": 7,
-            "tecnologia": 7
-        },
-        "color": "#10B981",
-        "fullDetails": {
-            "desempenho": {
-                "Motor e Potência": "1.0 Kappa, 3 cilindros",
-                "Potência máxima (cv)": "80 (E) / 75 (G) @ 6.000 rpm"
-            },
-            "consumo": {
-                "Urbano (km/l)": "9,1 (E) / 13,1 (G)",
-                "Eficiência energética": "1,54 MJ/km",
-                "Peso": "1.020 kg"
-            },
-            "dimensoes": {
-                "Comprimento": "4.015 mm",
-                "Largura": "1.720 mm",
-                "Altura": "1.470 mm",
-                "Entre-eixos": "2.530 mm",
-                "Porta-malas (VDA)": "300 L",
-                "Altura livre do solo": "160 mm"
-            },
-            "tecnologia": {
-                "Conectividade": "blueMedia 8\" com Apple CarPlay/Android Auto sem fio"
-            },
-            "conforto": {
-                "Adicionais": "Vidros elétricos traseiros"
-            },
-            "seguranca": {
-                "Sistemas Obrigatórios": "6 Airbags, ABS, ESC, ISOFIX",
-                "Sistemas Complementares": "HSA",
-                "Certificações de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
-            }
-        }
+    "scores": {
+      "desempenho": 6,
+      "consumo": 9,
+      "seguranca": 8,
+      "conforto": 6,
+      "tecnologia": 5
     },
-    {
-        "id": "hb20-limited-plus",
-        "model": "Hyundai HB20 (0km)",
-        "version": "Limited Plus 1.0",
-        "price": "R$ 93.090",
-        "details": {
-            "Motor": "1.0 Kappa de 80 cv",
-            "Consumo (G)": "13.1 km/l",
-            "Porta-malas": "300 L",
-            "Itens de Série": "Adiciona painel digital, chave presencial, câmera de ré"
-        },
-        "scores": {
-            "desempenho": 6,
-            "consumo": 9,
-            "seguranca": 8,
-            "conforto": 8,
-            "tecnologia": 8
-        },
-        "color": "#34D399",
-        "fullDetails": {
-            "desempenho": {
-                "Motor e Potência": "1.0 Kappa, 3 cilindros",
-                "Potência máxima (cv)": "80 (E) / 75 (G) @ 6.000 rpm"
-            },
-            "consumo": {
-                "Urbano (km/l)": "9,1 (E) / 13,1 (G)",
-                "Eficiência energética": "1,54 MJ/km",
-                "Peso": "1.020 kg"
-            },
-            "dimensoes": {
-                "Comprimento": "4.015 mm",
-                "Largura": "1.720 mm",
-                "Altura": "1.470 mm",
-                "Entre-eixos": "2.530 mm",
-                "Porta-malas (VDA)": "300 L",
-                "Altura livre do solo": "160 mm"
-            },
-            "tecnologia": {
-                "Sistemas Eletrônicos": "Painel de instrumentos digital, Chave presencial com partida por botão",
-                "Câmeras": "Câmera de ré"
-            },
-            "conforto": {
-                "Adicionais": "Abertura e fechamento dos vidros pela chave"
-            },
-            "seguranca": {
-                "Sistemas Obrigatórios": "6 Airbags, ABS, ESC, ISOFIX",
-                "Sistemas Complementares": "HSA",
-                "Certificações de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
-            }
-        }
-    },
-    {
-        "id": "hb20-comfort-turbo-at",
-        "model": "Hyundai HB20 (0km)",
-        "version": "Comfort Plus Turbo AT",
-        "price": "R$ 109.490",
-        "details": {
-            "Motor": "1.0 T-GDI de 120 cv",
-            "Consumo (G)": "12.2 km/l",
-            "Porta-malas": "300 L",
-            "Itens de Série": "Câmbio automático, piloto automático, rodas de liga leve"
-        },
-        "scores": {
-            "desempenho": 8,
-            "consumo": 8,
-            "seguranca": 8,
-            "conforto": 8,
-            "tecnologia": 7
-        },
-        "color": "#6EE7B7",
-        "fullDetails": {
-            "desempenho": {
-                "Motor e Potência": "1.0 T-GDI, 3 cilindros",
-                "Potência máxima (cv)": "120 (E/G) @ 6.000 rpm",
-                "Torque (kgf.m)": "17,5 (E/G) @ 1.500 rpm",
-                "Transmissão": "Automática de 6 marchas"
-            },
-            "consumo": {
-                "Urbano (km/l)": "8,6 (E) / 12,2 (G)",
-                "Eficiência energética": "1,68 MJ/km",
-                "Peso": "1.090 kg"
-            },
-            "dimensoes": {
-                "Comprimento": "4.015 mm",
-                "Largura": "1.720 mm",
-                "Altura": "1.470 mm",
-                "Entre-eixos": "2.530 mm",
-                "Porta-malas (VDA)": "300 L",
-                "Altura livre do solo": "160 mm"
-            },
-            "tecnologia": {
-                "Sistemas de Assistência (ADAS)": "Controle de cruzeiro"
-            },
-            "conforto": {
-                "Adicionais": "Apoio de braço para motorista"
-            },
-            "seguranca": {
-                "Sistemas Obrigatórios": "6 Airbags, ABS, ESC, ISOFIX",
-                "Sistemas Complementares": "HSA",
-                "Certificações de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
-            }
-        }
-    },
-    {
-        "id": "hb20-platinum-at",
-        "model": "Hyundai HB20 (0km)",
-        "version": "Platinum Turbo AT",
-        "price": "R$ 115.390",
-        "details": {
-            "Motor": "1.0 T-GDI de 120 cv",
-            "Consumo (G)": "12.2 km/l",
-            "Porta-malas": "300 L",
-            "Itens de Série": "Adiciona Bluelink, faróis de neblina, volante em couro"
-        },
-        "scores": {
-            "desempenho": 8,
-            "consumo": 8,
-            "seguranca": 9,
-            "conforto": 9,
-            "tecnologia": 8
-        },
-        "color": "#A7F3D0",
-        "fullDetails": {
-            "desempenho": {
-                "Motor e Potência": "1.0 T-GDI, 3 cilindros",
-                "Potência máxima (cv)": "120 (E/G) @ 6.000 rpm"
-            },
-            "consumo": {
-                "Urbano (km/l)": "8,6 (E) / 12,2 (G)",
-                "Eficiência energética": "1,68 MJ/km",
-                "Peso": "1.090 kg"
-            },
-            "dimensoes": {
-                "Comprimento": "4.015 mm",
-                "Largura": "1.720 mm",
-                "Altura": "1.470 mm",
-                "Entre-eixos": "2.530 mm",
-                "Porta-malas (VDA)": "300 L",
-                "Altura livre do solo": "160 mm"
-            },
-            "tecnologia": {
-                "Conectividade": "Sistema de conectividade Bluelink"
-            },
-            "conforto": {
-                "Materiais": "Volante revestido em couro"
-            },
-            "seguranca": {
-                "Iluminação": "Faróis de neblina",
-                "Sistemas Obrigatórios": "6 Airbags, ABS, ESC, ISOFIX",
-                "Certificações de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
-            }
-        }
-    },
-    {
-        "id": "hb20-platinum-plus",
-        "model": "Hyundai HB20 (0km)",
-        "version": "Platinum Plus Turbo AT",
-        "price": "R$ 123.590",
-        "details": {
-            "Motor": "1.0 T-GDI de 120 cv",
-            "Consumo (G)": "11.8 km/l",
-            "Porta-malas": "300 L",
-            "Itens de Série": "Pacote ADAS (frenagem autônoma, assist. de faixa), painel digital"
-        },
-        "scores": {
-            "desempenho": 8,
-            "consumo": 8,
-            "seguranca": 10,
-            "conforto": 9,
-            "tecnologia": 9
-        },
-        "color": "#D1FAE5",
-        "fullDetails": {
-            "desempenho": {
-                "Motor e Potência": "1.0 T-GDI, 3 cilindros",
-                "Potência máxima (cv)": "120 (E/G) @ 6.000 rpm"
-            },
-            "consumo": {
-                "Urbano (km/l)": "8,3 (E) / 11,8 (G)",
-                "Eficiência energética": "1,72 MJ/km",
-                "Peso": "1.110 kg"
-            },
-            "dimensoes": {
-                "Comprimento": "4.015 mm",
-                "Largura": "1.720 mm",
-                "Altura": "1.470 mm",
-                "Entre-eixos": "2.530 mm",
-                "Porta-malas (VDA)": "300 L",
-                "Altura livre do solo": "160 mm"
-            },
-            "tecnologia": {
-                "Sistemas de Assistência (ADAS)": "AEB, Assistente de permanência em faixa, Monitoramento de ponto cego, Alerta de tráfego cruzado traseiro"
-            },
-            "conforto": {
-                "Adicionais": "Ar-condicionado digital"
-            },
-            "seguranca": {
-                "Sistemas Complementares": "HSA, Monitoramento de pressão dos pneus (TPMS)",
-                "Certificações de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
-            }
-        }
+    "fullDetails": {
+      "desempenho": {
+        "Motorização": "1.0 Kappa, 3 cilindros, 12 válvulas",
+        "Alimentação": "Aspiração natural com injeção multiponto",
+        "Potência máxima (cv)": "80 (Etanol) / 75 (Gasolina) @ 6.000 rpm",
+        "Torque (kgf.m)": "10,2 (Etanol) / 9,4 (Gasolina) @ 4.500 rpm",
+        "Transmissão": "Manual de 5 marchas",
+        "Aceleração (0-100 km/h)": "14,5 s",
+        "Velocidade Máxima": "162 km/h"
+      },
+      "consumo": {
+        "Consumo Urbano (km/l)": "9,1 (Etanol) / 13,1 (Gasolina)",
+        "Consumo Rodoviário (km/l)": "9,8 (Etanol) / 14,0 (Gasolina)",
+        "Eficiência Energética": "1,54 MJ/km",
+        "Tanque de Combustível": "50 L"
+      },
+      "dimensoes": {
+        "Comprimento": "4.015 mm",
+        "Largura": "1.720 mm",
+        "Altura": "1.470 mm",
+        "Entre-eixos": "2.530 mm",
+        "Porta-malas (VDA)": "300 L",
+        "Porta-malas (bancos rebatidos)": "Aprox. 930 L",
+        "Peso": "1.020 kg"
+      },
+      "tecnologia": {
+        "Sistema de Áudio": "Rádio blueAudio com Bluetooth e MP3",
+        "Conectividade": "Porta USB-A",
+        "Painel de Instrumentos": "Analógico com computador de bordo"
+      },
+      "conforto": {
+        "Direção": "Elétrica progressiva",
+        "Ar-condicionado": "Sim, manual",
+        "Ajuste do Volante": "Ajuste de altura",
+        "Ajuste do Banco do Motorista": "Ajuste de altura",
+        "Vidros e Travas": "Vidros elétricos dianteiros, travas elétricas",
+        "Capacidade": "5 passageiros"
+      },
+      "seguranca": {
+        "Airbags": "6 Airbags (2 frontais, 2 laterais, 2 de cortina)",
+        "Sistemas Ativos": "Freios ABS com EBD, Controle de Estabilidade (ESC), Controle de Tração (TCS)",
+        "Sistemas Passivos": "Estrutura com deformação programada, ISOFIX",
+        "Sistemas Auxiliares": "Assistente de partida em rampa (HSA)",
+        "Iluminação": "Luzes diurnas (DRL) halógenas",
+        "Certificação de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
+      }
     }
+  },
+  {
+    "id": "hb20-comfort-plus",
+    "model": "Hyundai HB20 (0km)",
+    "version": "Comfort Plus 1.0",
+    "price": "R$ 89.490",
+    "color": "#10B981",
+    "details": {
+      "Motor": "1.0 Kappa de 80 cv",
+      "Segurança": "6 Airbags, Controle de Estabilidade (ESC)",
+      "Porta-malas": "300 L",
+      "Destaques": "Adiciona multimídia 8\" sem fio, retrovisores elétricos"
+    },
+    "scores": {
+      "desempenho": 6,
+      "consumo": 9,
+      "seguranca": 8,
+      "conforto": 7,
+      "tecnologia": 7
+    },
+    "fullDetails": {
+        "desempenho": {
+        "Motorização": "1.0 Kappa, 3 cilindros, 12 válvulas",
+        "Alimentação": "Aspiração natural com injeção multiponto",
+        "Potência máxima (cv)": "80 (Etanol) / 75 (Gasolina) @ 6.000 rpm",
+        "Torque (kgf.m)": "10,2 (Etanol) / 9,4 (Gasolina) @ 4.500 rpm",
+        "Transmissão": "Manual de 5 marchas",
+        "Aceleração (0-100 km/h)": "14,5 s",
+        "Velocidade Máxima": "162 km/h"
+      },
+      "consumo": {
+        "Consumo Urbano (km/l)": "9,1 (Etanol) / 13,1 (Gasolina)",
+        "Consumo Rodoviário (km/l)": "9,8 (Etanol) / 14,0 (Gasolina)",
+        "Eficiência Energética": "1,54 MJ/km",
+        "Tanque de Combustível": "50 L"
+      },
+      "dimensoes": {
+        "Comprimento": "4.015 mm",
+        "Largura": "1.720 mm",
+        "Altura": "1.470 mm",
+        "Entre-eixos": "2.530 mm",
+        "Porta-malas (VDA)": "300 L",
+        "Porta-malas (bancos rebatidos)": "Aprox. 930 L",
+        "Peso": "1.020 kg"
+      },
+      "tecnologia": {
+        "Central Multimídia": "blueMedia de 8\" com espelhamento sem fio (Apple CarPlay/Android Auto)",
+        "Conectividade": "Porta USB-A e USB-C",
+        "Painel de Instrumentos": "Analógico com computador de bordo"
+      },
+      "conforto": {
+        "Direção": "Elétrica progressiva",
+        "Ar-condicionado": "Sim, manual",
+        "Ajuste do Volante": "Ajuste de altura",
+        "Ajuste do Banco do Motorista": "Ajuste de altura",
+        "Vidros e Travas": "Vidros elétricos dianteiros e traseiros (one-touch)",
+        "Retrovisores": "Elétricos com repetidores de seta"
+      },
+      "seguranca": {
+        "Airbags": "6 Airbags (2 frontais, 2 laterais, 2 de cortina)",
+        "Sistemas Ativos": "Freios ABS com EBD, Controle de Estabilidade (ESC), Controle de Tração (TCS)",
+        "Sistemas Passivos": "Estrutura com deformação programada, ISOFIX",
+        "Sistemas Auxiliares": "Assistente de partida em rampa (HSA)",
+        "Iluminação": "Luzes diurnas (DRL) halógenas",
+        "Certificação de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
+      }
+    }
+  },
+  {
+    "id": "hb20-limited-plus",
+    "model": "Hyundai HB20 (0km)",
+    "version": "Limited Plus 1.0",
+    "price": "R$ 93.090",
+    "color": "#34D399",
+    "details": {
+      "Motor": "1.0 Kappa de 80 cv",
+      "Segurança": "6 Airbags, Controle de Estabilidade (ESC)",
+      "Porta-malas": "300 L",
+      "Destaques": "Chave presencial, painel digital, câmera de ré"
+    },
+    "scores": {
+      "desempenho": 6,
+      "consumo": 9,
+      "seguranca": 8,
+      "conforto": 8,
+      "tecnologia": 8
+    },
+    "fullDetails": {
+        "desempenho": {
+        "Motorização": "1.0 Kappa, 3 cilindros, 12 válvulas",
+        "Alimentação": "Aspiração natural com injeção multiponto",
+        "Potência máxima (cv)": "80 (Etanol) / 75 (Gasolina) @ 6.000 rpm",
+        "Torque (kgf.m)": "10,2 (Etanol) / 9,4 (Gasolina) @ 4.500 rpm",
+        "Transmissão": "Manual de 5 marchas",
+        "Aceleração (0-100 km/h)": "14,5 s",
+        "Velocidade Máxima": "162 km/h"
+      },
+      "consumo": {
+        "Consumo Urbano (km/l)": "9,1 (Etanol) / 13,1 (Gasolina)",
+        "Consumo Rodoviário (km/l)": "9,8 (Etanol) / 14,0 (Gasolina)",
+        "Eficiência Energética": "1,54 MJ/km",
+        "Tanque de Combustível": "50 L"
+      },
+      "dimensoes": {
+        "Comprimento": "4.015 mm",
+        "Largura": "1.720 mm",
+        "Altura": "1.470 mm",
+        "Entre-eixos": "2.530 mm",
+        "Porta-malas (VDA)": "300 L",
+        "Porta-malas (bancos rebatidos)": "Aprox. 930 L",
+        "Peso": "1.020 kg"
+      },
+      "tecnologia": {
+        "Central Multimídia": "blueMedia de 8\" com espelhamento sem fio (Apple CarPlay/Android Auto)",
+        "Conectividade": "Porta USB-A e USB-C",
+        "Painel de Instrumentos": "Supervision Cluster digital de 4,2 polegadas",
+        "Câmeras": "Câmera de ré",
+        "Chave": "Chave presencial Smart Key com partida por botão"
+      },
+      "conforto": {
+        "Direção": "Elétrica progressiva",
+        "Ar-condicionado": "Sim, manual",
+        "Ajuste do Volante": "Ajuste de altura",
+        "Ajuste do Banco do Motorista": "Ajuste de altura",
+        "Vidros e Travas": "Vidros elétricos (one-touch) com abertura/fechamento pela chave"
+      },
+      "seguranca": {
+        "Airbags": "6 Airbags (2 frontais, 2 laterais, 2 de cortina)",
+        "Sistemas Ativos": "Freios ABS com EBD, Controle de Estabilidade (ESC), Controle de Tração (TCS)",
+        "Sistemas Passivos": "Estrutura com deformação programada, ISOFIX",
+        "Sistemas Auxiliares": "Assistente de partida em rampa (HSA), Sensores de estacionamento traseiro",
+        "Certificação de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
+      }
+    }
+  },
+  {
+    "id": "hb20-comfort-turbo-at",
+    "model": "Hyundai HB20 (0km)",
+    "version": "Comfort Plus Turbo AT",
+    "price": "R$ 109.490",
+    "color": "#6EE7B7",
+    "details": {
+      "Motor": "1.0 T-GDI de 120 cv",
+      "Segurança": "6 Airbags, Controle de Estabilidade (ESC)",
+      "Porta-malas": "300 L",
+      "Destaques": "Câmbio automático, piloto automático, motor turbo"
+    },
+    "scores": {
+      "desempenho": 8,
+      "consumo": 8,
+      "seguranca": 8,
+      "conforto": 8,
+      "tecnologia": 7
+    },
+    "fullDetails": {
+        "desempenho": {
+        "Motorização": "1.0 T-GDI, 3 cilindros, 12 válvulas, Injeção Direta",
+        "Alimentação": "Turbocompressor",
+        "Potência máxima (cv)": "120 (Etanol/Gasolina) @ 6.000 rpm",
+        "Torque (kgf.m)": "17,5 (Etanol/Gasolina) @ 1.500 rpm",
+        "Transmissão": "Automática de 6 marchas",
+        "Aceleração (0-100 km/h)": "10,7 s",
+        "Velocidade Máxima": "190 km/h"
+      },
+      "consumo": {
+        "Consumo Urbano (km/l)": "8,6 (Etanol) / 12,2 (Gasolina)",
+        "Consumo Rodoviário (km/l)": "10,0 (Etanol) / 13,9 (Gasolina)",
+        "Eficiência Energética": "1,68 MJ/km",
+        "Tanque de Combustível": "50 L"
+      },
+      "dimensoes": {
+        "Comprimento": "4.015 mm",
+        "Largura": "1.720 mm",
+        "Altura": "1.470 mm",
+        "Entre-eixos": "2.530 mm",
+        "Porta-malas (VDA)": "300 L",
+        "Peso": "1.090 kg"
+      },
+      "tecnologia": {
+        "Central Multimídia": "blueMedia de 8\" com espelhamento sem fio (Apple CarPlay/Android Auto)",
+        "Sistemas de Assistência": "Piloto automático e limitador de velocidade"
+      },
+      "conforto": {
+        "Direção": "Elétrica progressiva",
+        "Ar-condicionado": "Sim, manual",
+        "Ajuste do Volante": "Ajuste de altura",
+        "Ajuste do Banco do Motorista": "Ajuste de altura",
+        "Diferenciais": "Apoio de braço para motorista, Rodas de liga leve 16\""
+      },
+      "seguranca": {
+        "Airbags": "6 Airbags (2 frontais, 2 laterais, 2 de cortina)",
+        "Sistemas Ativos": "Freios ABS com EBD, Controle de Estabilidade (ESC), Controle de Tração (TCS)",
+        "Sistemas Passivos": "Estrutura com deformação programada, ISOFIX",
+        "Sistemas Auxiliares": "Assistente de partida em rampa (HSA)",
+        "Certificação de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
+      }
+    }
+  },
+  {
+    "id": "hb20-platinum-at",
+    "model": "Hyundai HB20 (0km)",
+    "version": "Platinum Turbo AT",
+    "price": "R$ 115.390",
+    "color": "#A7F3D0",
+    "details": {
+      "Motor": "1.0 T-GDI de 120 cv",
+      "Segurança": "6 Airbags, Controle de Estabilidade (ESC)",
+      "Porta-malas": "300 L",
+      "Destaques": "Bluelink, painel digital, chave presencial"
+    },
+    "scores": {
+      "desempenho": 8,
+      "consumo": 8,
+      "seguranca": 9,
+      "conforto": 9,
+      "tecnologia": 8
+    },
+    "fullDetails": {
+        "desempenho": {
+        "Motorização": "1.0 T-GDI, 3 cilindros, 12 válvulas, Injeção Direta",
+        "Alimentação": "Turbocompressor",
+        "Potência máxima (cv)": "120 (Etanol/Gasolina) @ 6.000 rpm",
+        "Torque (kgf.m)": "17,5 (Etanol/Gasolina) @ 1.500 rpm",
+        "Transmissão": "Automática de 6 marchas",
+        "Aceleração (0-100 km/h)": "10,7 s",
+        "Velocidade Máxima": "190 km/h"
+      },
+      "consumo": {
+        "Consumo Urbano (km/l)": "8,6 (Etanol) / 12,2 (Gasolina)",
+        "Consumo Rodoviário (km/l)": "10,0 (Etanol) / 13,9 (Gasolina)",
+        "Eficiência Energética": "1,68 MJ/km",
+        "Tanque de Combustível": "50 L"
+      },
+      "dimensoes": {
+        "Comprimento": "4.015 mm",
+        "Largura": "1.720 mm",
+        "Altura": "1.470 mm",
+        "Entre-eixos": "2.530 mm",
+        "Porta-malas (VDA)": "300 L",
+        "Peso": "1.090 kg"
+      },
+      "tecnologia": {
+        "Central Multimídia": "blueMedia de 8\" com espelhamento sem fio",
+        "Conectividade": "Sistema de conectividade veicular Bluelink®",
+        "Painel de Instrumentos": "Supervision Cluster digital de 4,2 polegadas",
+        "Câmeras": "Câmera de ré",
+        "Chave": "Chave presencial Smart Key com partida por botão"
+      },
+      "conforto": {
+        "Direção": "Elétrica progressiva",
+        "Ar-condicionado": "Sim, manual",
+        "Ajuste do Volante": "Ajuste de altura e profundidade",
+        "Ajuste do Banco do Motorista": "Ajuste de altura",
+        "Materiais do Acabamento": "Volante revestido em couro"
+      },
+      "seguranca": {
+        "Airbags": "6 Airbags (2 frontais, 2 laterais, 2 de cortina)",
+        "Sistemas Ativos": "Freios ABS com EBD, Controle de Estabilidade (ESC), Controle de Tração (TCS)",
+        "Sistemas Auxiliares": "HSA, Sensores de estacionamento traseiro",
+        "Iluminação": "Faróis de neblina dianteiros",
+        "Certificação de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
+      }
+    }
+  },
+  {
+    "id": "hb20-platinum-plus",
+    "model": "Hyundai HB20 (0km)",
+    "version": "Platinum Plus Turbo AT",
+    "price": "R$ 123.590",
+    "color": "#D1FAE5",
+    "details": {
+      "Motor": "1.0 T-GDI de 120 cv",
+      "Segurança": "Pacote ADAS completo, 6 Airbags",
+      "Porta-malas": "300 L",
+      "Destaques": "Frenagem autônoma, Assistente de faixa"
+    },
+    "scores": {
+      "desempenho": 8,
+      "consumo": 8,
+      "seguranca": 10,
+      "conforto": 9,
+      "tecnologia": 9
+    },
+    "fullDetails": {
+        "desempenho": {
+        "Motorização": "1.0 T-GDI, 3 cilindros, 12 válvulas, Injeção Direta",
+        "Alimentação": "Turbocompressor",
+        "Potência máxima (cv)": "120 (Etanol/Gasolina) @ 6.000 rpm",
+        "Torque (kgf.m)": "17,5 (Etanol/Gasolina) @ 1.500 rpm",
+        "Transmissão": "Automática de 6 marchas",
+        "Aceleração (0-100 km/h)": "10,7 s",
+        "Velocidade Máxima": "190 km/h"
+      },
+      "consumo": {
+        "Consumo Urbano (km/l)": "8,3 (Etanol) / 11,8 (Gasolina)",
+        "Consumo Rodoviário (km/l)": "9,8 (Etanol) / 13,6 (Gasolina)",
+        "Eficiência Energética": "1,72 MJ/km",
+        "Tanque de Combustível": "50 L"
+      },
+      "dimensoes": {
+        "Comprimento": "4.015 mm",
+        "Largura": "1.720 mm",
+        "Altura": "1.470 mm",
+        "Entre-eixos": "2.530 mm",
+        "Porta-malas (VDA)": "300 L",
+        "Peso": "1.110 kg"
+      },
+      "tecnologia": {
+        "Central Multimídia": "blueMedia de 8\" com espelhamento sem fio",
+        "Conectividade": "Sistema de conectividade veicular Bluelink®",
+        "Painel de Instrumentos": "Supervision Cluster digital de 4,2 polegadas"
+      },
+      "conforto": {
+        "Direção": "Elétrica progressiva",
+        "Ar-condicionado": "Automático digital",
+        "Ajuste do Volante": "Ajuste de altura e profundidade",
+        "Diferenciais": "Partida remota do motor pela chave, aletas no volante (paddle shifters)"
+      },
+      "seguranca": {
+        "Airbags": "6 Airbags (2 frontais, 2 laterais, 2 de cortina)",
+        "Sistemas Ativos": "Freios ABS com EBD, Controle de Estabilidade (ESC), Controle de Tração (TCS)",
+        "Sistemas de Assistência (ADAS)": "Frenagem Autônoma de Emergência (AEB), Assistente de permanência e centralização em faixa (LFA/LKA), Monitoramento de ponto cego (BCW), Alerta de tráfego cruzado traseiro (RCCW)",
+        "Sistemas Auxiliares": "HSA, Monitoramento de pressão dos pneus (TPMS)",
+        "Iluminação": "Faróis com projetor e DRL em LED",
+        "Certificação de Segurança": "3 estrelas (Latin NCAP - protocolo 2024)"
+      }
+    }
+  }
 ]

@@ -4,11 +4,12 @@
         "model": "Renault Kwid (0km)",
         "version": "Outsider 1.0",
         "price": "R$ 79.990",
+        "color": "#F97316",
         "details": {
             "Motor": "1.0 SCe de 71 cv",
-            "Consumo (G)": "15.3 km/l",
+            "Consumo (G)": "15.3 km/l (Urbano)",
             "Porta-malas": "290 L",
-            "Itens de Série": "Visual aventureiro, multimídia 8\", 4 airbags, câmera de ré"
+            "Destaques": "Direção elétrica, Multimídia 8\", 4 airbags, Câmera de ré"
         },
         "scores": {
             "desempenho": 4,
@@ -17,19 +18,22 @@
             "conforto": 4,
             "tecnologia": 6
         },
-        "color": "#F97316",
         "fullDetails": {
             "desempenho": {
-                "Motor e Potência": "1.0 SCe, 3 cilindros",
-                "Potência máxima (cv)": "71 (E) / 68 (G) @ 5.500 rpm",
-                "Torque (kgf.m)": "10,0 (E) / 9,4 (G) @ 4.250 rpm",
-                "Transmissão": "Manual de 5 marchas"
+                "Motorização": "1.0 SCe, 3 cilindros, 12 válvulas",
+                "Alimentação": "Aspiração natural",
+                "Potência máxima (cv)": "71 (Etanol) / 68 (Gasolina) @ 5.500 rpm",
+                "Torque (kgf.m)": "10,0 (Etanol) / 9,4 (Gasolina) @ 4.250 rpm",
+                "Transmissão": "Manual de 5 marchas",
+                "Aceleração (0-100 km/h)": "13,2 s",
+                "Velocidade Máxima": "156 km/h"
             },
             "consumo": {
-                "Urbano (km/l)": "10,8 (E) / 15,3 (G)",
-                "Rodoviário (km/l)": "11,0 (E) / 15,7 (G)",
-                "Eficiência energética": "1,44 MJ/km",
-                "Peso": "820 kg"
+                "Consumo Urbano (km/l)": "10,8 (Etanol) / 15,3 (Gasolina)",
+                "Consumo Rodoviário (km/l)": "11,0 (Etanol) / 15,7 (Gasolina)",
+                "Eficiência Energética": "1,44 MJ/km (Selo CONPET A)",
+                "Tanque de Combustível": "38 L",
+                "Sistema Start-Stop": "Não possui"
             },
             "dimensoes": {
                 "Comprimento": "3.680 mm",
@@ -37,21 +41,32 @@
                 "Altura": "1.479 mm",
                 "Entre-eixos": "2.423 mm",
                 "Porta-malas (VDA)": "290 L",
+                "Porta-malas (bancos rebatidos)": "Aprox. 1.100 L",
+                "Peso": "820 kg",
                 "Altura livre do solo": "185 mm"
             },
             "tecnologia": {
-                "Conectividade": "Media Evolution 8\" com Apple CarPlay/Android Auto",
+                "Central Multimídia": "Media Evolution de 8\" com espelhamento (Apple CarPlay/Android Auto)",
+                "Conectividade": "Entrada USB, AUX e Bluetooth",
                 "Câmeras": "Câmera de ré"
             },
             "conforto": {
-                "Adicionais": "Visual aventureiro"
+                "Direção": "Elétrica",
+                "Ar-condicionado": "Sim, manual",
+                "Ajuste do Volante": "Não possui (coluna fixa)",
+                "Ajuste do Banco do Motorista": "Ajuste longitudinal e de inclinação (sem altura)",
+                "Materiais do Acabamento": "Plásticos rígidos com detalhes em preto brilhante e tecido nos bancos",
+                "Capacidade": "5 passageiros"
             },
             "seguranca": {
-                "Sistemas Obrigatórios": "4 Airbags (frontais e laterais), ABS, ESC, ISOFIX",
-                "Sistemas Complementares": "Assistente de partida em rampa (HSA)",
-                "Certificações de Segurança": "1 estrela (Latin NCAP - protocolo 2022)"
+                "Airbags": "4 Airbags (2 frontais e 2 laterais)",
+                "Sistemas Ativos": "Freios ABS, Controle Eletrônico de Estabilidade (ESC), Assistente de partida em rampa (HSA)",
+                "Sistemas Passivos": "Estrutura com zonas de deformação, ISOFIX para cadeirinhas infantis",
+                "Sistemas Auxiliares": "Monitoramento de pressão dos pneus (TPMS), Alarme perimétrico",
+                "Cintos de Segurança": "Dianteiros com pré-tensionadores e limitador de esforço",
+                "Iluminação": "Faróis halógenos com assinatura DRL em LED",
+                "Certificação de Segurança": "1 estrela (Latin NCAP - protocolo 2022)"
             }
         }
     }
 ]
-

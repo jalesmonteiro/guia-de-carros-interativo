@@ -2,13 +2,14 @@
     {
         "id": "gol-g5",
         "model": "VW Gol G5 (2008)",
-        "version": "1.0 VHT (Valor Corrigido)",
-        "price": "~ R$ 77.700",
+        "version": "1.0 VHT",
+        "price": "~ R$ 28.000 (Valor FIPE)",
+        "color": "#6B7280",
         "details": {
             "Motor": "1.0 de 76 cv",
-            "Consumo (G)": "12.1 km/l",
+            "Consumo (G)": "12.1 km/l (Urbano)",
             "Porta-malas": "285 L",
-            "Itens de Série": "Básico (sem ar ou direção hidráulica de série)"
+            "Destaques": "Robustez mecânica e design popular"
         },
         "scores": {
             "desempenho": 4,
@@ -17,22 +18,21 @@
             "conforto": 3,
             "tecnologia": 1
         },
-        "color": "#6B7280",
         "fullDetails": {
             "desempenho": {
-                "Motor e Potência": "1.0 VHT, 4 cilindros, 8 válvulas",
-                "Potência máxima (cv)": "76 (E) / 72 (G) @ 5.750 rpm",
-                "Torque (kgf.m)": "10,6 (E) / 9,7 (G) @ 4.250 rpm",
-                "Tipo de alimentação": "Aspirado",
+                "Motorização": "1.0 VHT, 4 cilindros, 8 válvulas",
+                "Alimentação": "Aspiração natural com injeção multiponto",
+                "Potência máxima (cv)": "76 (Etanol) / 72 (Gasolina) @ 5.750 rpm",
+                "Torque (kgf.m)": "10,6 (Etanol) / 9,7 (Gasolina) @ 4.250 rpm",
                 "Transmissão": "Manual de 5 marchas",
-                "Aceleração 0-100 km/h": "12,9 s",
-                "Velocidade máxima": "169 km/h"
+                "Aceleração (0-100 km/h)": "12,9 s",
+                "Velocidade Máxima": "169 km/h"
             },
             "consumo": {
-                "Urbano (km/l)": "8,8 (E) / 12,1 (G)",
-                "Rodoviário (km/l)": "10,9 (E) / 14,3 (G)",
-                "Capacidade do tanque": "55 L",
-                "Peso do veículo": "944 kg"
+                "Consumo Urbano (km/l)": "8,8 (Etanol) / 12,1 (Gasolina)",
+                "Consumo Rodoviário (km/l)": "10,9 (Etanol) / 14,3 (Gasolina)",
+                "Tanque de Combustível": "55 L",
+                "Sistema Start-Stop": "Não possui"
             },
             "dimensoes": {
                 "Comprimento": "3.899 mm",
@@ -40,21 +40,32 @@
                 "Altura": "1.464 mm",
                 "Entre-eixos": "2.465 mm",
                 "Porta-malas (VDA)": "285 L",
+                "Porta-malas (bancos rebatidos)": "Aprox. 790 L",
+                "Peso": "944 kg",
                 "Altura livre do solo": "154 mm"
             },
             "tecnologia": {
-                "Conectividade": "Rádio simples (opcional)",
-                "Sistemas Eletrônicos": "Arquitetura distribuída (ECUs múltiplas)"
+                "Sistema de Áudio": "Sem som de série (preparação com 4 alto-falantes e antena como opcional)",
+                "Conectividade": "Não possui de série (rádio/CD player opcional de concessionária)",
+                "Painel de Instrumentos": "Analógico com computador de bordo simples (opcional)"
             },
             "conforto": {
-                "Ajustes do banco": "Manual (distância e inclinação)",
+                "Direção": "Mecânica (Hidráulica como opcional)",
+                "Ar-condicionado": "Não possui de série (Opcional)",
+                "Vidros e Travas": "Manuais (Elétricos como opcional)",
+                "Ajuste do Volante": "Coluna fixa (Ajuste de altura como opcional)",
+                "Ajuste do Banco do Motorista": "Ajuste longitudinal e de inclinação (ajuste de altura como opcional)",
+                "Materiais do Acabamento": "Plásticos rígidos e tecido simples nos bancos",
                 "Capacidade": "5 passageiros"
             },
             "seguranca": {
-                "Sistemas Obrigatórios": "Freios a disco (D) e tambor (T). ABS opcional em anos posteriores.",
-                "Airbags": "Não disponíveis de série",
-                "Estrutura da carroceria": "Aço convencional com zonas de deformação programada",
-                "Certificações de Segurança": "Não avaliado pelo Latin NCAP na época"
+                "Airbags": "Não disponível de série (Opcional duplo frontal em versões/anos posteriores)",
+                "Sistemas Ativos": "Freios a disco na dianteira e tambor na traseira (ABS como opcional em versões/anos posteriores)",
+                "Sistemas Passivos": "Estrutura com zonas de deformação programada",
+                "Sistemas Auxiliares": "Nenhum de série (Alarme como opcional)",
+                "Cintos de Segurança": "Dianteiros de 3 pontos, traseiros laterais de 3 pontos e central subabdominal",
+                "ISOFIX": "Não possui",
+                "Certificação de Segurança": "Não foi avaliado pelos protocolos do Latin NCAP na época"
             }
         }
     }
