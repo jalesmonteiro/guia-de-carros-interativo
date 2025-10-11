@@ -1,0 +1,253 @@
+[
+    {
+        "id": "polo-track",
+        "model": "VW Polo (0km)",
+        "version": "Track 1.0",
+        "price": "R$ 89.290",
+        "details": {
+            "Motor": "1.0 MPI de 84 cv",
+            "Consumo (G)": "13.1 km/l",
+            "Porta-malas": "300 L",
+            "Itens de Série": "4 airbags, controle de estabilidade, rádio com Bluetooth"
+        },
+        "scores": {
+            "desempenho": 6,
+            "consumo": 9,
+            "seguranca": 7,
+            "conforto": 5,
+            "tecnologia": 4
+        },
+        "color": "#5B21B6",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.0 MPI, 3 cilindros",
+                "Potência máxima (cv)": "84 (E) / 77 (G) @ 6.450 rpm",
+                "Torque (kgf.m)": "10,3 (E) / 9,6 (G) @ 3.000 rpm",
+                "Transmissão": "Manual de 5 marchas"
+            },
+            "consumo": {
+                "Urbano (km/l)": "9,3 (E) / 13,1 (G)",
+                "Eficiência energética": "1,53 MJ/km",
+                "Peso": "1.054 kg"
+            },
+            "dimensoes": {
+                "Comprimento": "4.074 mm",
+                "Largura": "1.751 mm",
+                "Altura": "1.471 mm",
+                "Entre-eixos": "2.566 mm",
+                "Porta-malas (VDA)": "300 L",
+                "Altura livre do solo": "149 mm"
+            },
+            "tecnologia": {
+                "Conectividade": "Rádio \"Media Plus II\" com Bluetooth"
+            },
+            "conforto": {
+                "Adicionais": "Direção elétrica"
+            },
+            "seguranca": {
+                "Sistemas Obrigatórios": "4 Airbags (frontais e laterais), ABS, ESC, ISOFIX",
+                "Sistemas Complementares": "HSA",
+                "Estrutura da carroceria": "Aço de alta resistência",
+                "Certificações de Segurança": "3 estrelas (Latin NCAP - protocolo 2022)"
+            }
+        }
+    },
+    {
+        "id": "polo-mpi",
+        "model": "VW Polo (0km)",
+        "version": "MPI 1.0",
+        "price": "R$ 93.990",
+        "details": {
+            "Motor": "1.0 MPI de 84 cv",
+            "Consumo (G)": "13.1 km/l",
+            "Porta-malas": "300 L",
+            "Itens de Série": "Adiciona faróis em LED, multimídia Composition Touch 6.5\""
+        },
+        "scores": {
+            "desempenho": 6,
+            "consumo": 9,
+            "seguranca": 7,
+            "conforto": 6,
+            "tecnologia": 6
+        },
+        "color": "#7C3AED",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.0 MPI, 3 cilindros",
+                "Potência máxima (cv)": "84 (E) / 77 (G) @ 6.450 rpm"
+            },
+            "consumo": {
+                "Urbano (km/l)": "9,3 (E) / 13,1 (G)",
+                "Eficiência energética": "1,53 MJ/km",
+                "Peso": "1.070 kg"
+            },
+            "dimensoes": {
+                "Comprimento": "4.074 mm",
+                "Largura": "1.751 mm",
+                "Altura": "1.468 mm",
+                "Entre-eixos": "2.566 mm",
+                "Porta-malas (VDA)": "300 L",
+                "Altura livre do solo": "149 mm"
+            },
+            "tecnologia": {
+                "Conectividade": "Composition Touch 6.5\" com Apple CarPlay/Android Auto"
+            },
+            "seguranca": {
+                "Iluminação": "Faróis de LED com DRL",
+                "Sistemas Obrigatórios": "4 Airbags, ABS, ESC, ISOFIX",
+                "Certificações de Segurança": "3 estrelas (Latin NCAP - protocolo 2022)"
+            }
+        }
+    },
+    {
+        "id": "polo-comfortline",
+        "model": "VW Polo (0km)",
+        "version": "Comfortline TSI AT",
+        "price": "R$ 114.990",
+        "details": {
+            "Motor": "1.0 TSI de 116 cv",
+            "Consumo (G)": "12.5 km/l",
+            "Porta-malas": "300 L",
+            "Itens de Série": "Câmbio automático, piloto automático, painel digital 8\", chave presencial"
+        },
+        "scores": {
+            "desempenho": 8,
+            "consumo": 8,
+            "seguranca": 8,
+            "conforto": 8,
+            "tecnologia": 8
+        },
+        "color": "#8B5CF6",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "170 TSI, 1.0 Turbo",
+                "Potência máxima (cv)": "116 (E) / 109 (G) @ 5.000 rpm",
+                "Torque (kgf.m)": "16,8 (E/G) @ 1.750 rpm",
+                "Transmissão": "Automática de 6 marchas"
+            },
+            "consumo": {
+                "Urbano (km/l)": "8,7 (E) / 12,5 (G)",
+                "Eficiência energética": "1,68 MJ/km",
+                "Peso": "1.174 kg"
+            },
+            "dimensoes": {
+                "Comprimento": "4.074 mm",
+                "Largura": "1.751 mm",
+                "Altura": "1.468 mm",
+                "Entre-eixos": "2.566 mm",
+                "Porta-malas (VDA)": "300 L",
+                "Altura livre do solo": "149 mm"
+            },
+            "tecnologia": {
+                "Sistemas de Assistência (ADAS)": "Controle de cruzeiro",
+                "Sistemas Eletrônicos": "Painel digital 8\", Chave presencial"
+            },
+            "seguranca": {
+                "Sistemas Obrigatórios": "4 Airbags, ABS, ESC, ISOFIX",
+                "Certificações de Segurança": "3 estrelas (Latin NCAP - protocolo 2022)"
+            }
+        }
+    },
+    {
+        "id": "polo-highline",
+        "model": "VW Polo (0km)",
+        "version": "Highline TSI AT",
+        "price": "R$ 121.990",
+        "details": {
+            "Motor": "1.0 TSI de 116 cv",
+            "Consumo (G)": "12.5 km/l",
+            "Porta-malas": "300 L",
+            "Itens de Série": "Painel digital 10.25\", multimídia VW Play 10.1\", ar digital, bancos em couro"
+        },
+        "scores": {
+            "desempenho": 8,
+            "consumo": 8,
+            "seguranca": 9,
+            "conforto": 9,
+            "tecnologia": 9
+        },
+        "color": "#A78BFA",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "170 TSI, 1.0 Turbo",
+                "Potência máxima (cv)": "116 (E) / 109 (G) @ 5.000 rpm"
+            },
+            "consumo": {
+                "Urbano (km/l)": "8,7 (E) / 12,5 (G)",
+                "Eficiência energética": "1,68 MJ/km",
+                "Peso": "1.174 kg"
+            },
+            "dimensoes": {
+                "Comprimento": "4.074 mm",
+                "Largura": "1.751 mm",
+                "Altura": "1.468 mm",
+                "Entre-eixos": "2.566 mm",
+                "Porta-malas (VDA)": "300 L",
+                "Altura livre do solo": "149 mm"
+            },
+            "tecnologia": {
+                "Conectividade": "VW Play 10.1\" sem fio",
+                "Sistemas Eletrônicos": "Painel digital 10.25\", Carregador de celular por indução"
+            },
+            "conforto": {
+                "Adicionais": "Ar-condicionado digital Climatronic Touch",
+                "Materiais": "Bancos em couro sintético"
+            },
+            "seguranca": {
+                "Sistemas Complementares": "HSA, TPMS",
+                "Certificações de Segurança": "3 estrelas (Latin NCAP - protocolo 2022)"
+            }
+        }
+    },
+    {
+        "id": "polo-gts",
+        "model": "VW Polo (0km)",
+        "version": "GTS 250 TSI AT",
+        "price": "R$ 151.490",
+        "details": {
+            "Motor": "1.4 Turbo de 150 cv",
+            "Consumo (G)": "11.6 km/l",
+            "Porta-malas": "300 L",
+            "Itens de Série": "Visual esportivo, motor 1.4, seletor de modo de condução"
+        },
+        "scores": {
+            "desempenho": 10,
+            "consumo": 7,
+            "seguranca": 9,
+            "conforto": 9,
+            "tecnologia": 9
+        },
+        "color": "#C4B5FD",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "250 TSI, 1.4 Turbo",
+                "Potência máxima (cv)": "150 (E/G) @ 4.500 rpm",
+                "Torque (kgf.m)": "25,5 (E/G) @ 1.500 rpm",
+                "Aceleração 0-100 km/h": "8,3 s"
+            },
+            "consumo": {
+                "Urbano (km/l)": "8,0 (E) / 11,6 (G)",
+                "Eficiência energética": "1,86 MJ/km",
+                "Peso": "1.294 kg"
+            },
+            "dimensoes": {
+                "Comprimento": "4.074 mm",
+                "Largura": "1.751 mm",
+                "Altura": "1.468 mm",
+                "Entre-eixos": "2.566 mm",
+                "Porta-malas (VDA)": "300 L",
+                "Altura livre do solo": "149 mm"
+            },
+            "tecnologia": {
+                "Sistemas Eletrônicos": "Seletor de modo de condução (Eco, Normal, Sport, Individual)"
+            },
+            "conforto": {
+                "Adicionais": "Bancos dianteiros esportivos"
+            },
+            "seguranca": {
+                "Sistemas Complementares": "Bloqueio eletrônico do diferencial (XDS+)",
+                "Certificações de Segurança": "3 estrelas (Latin NCAP - protocolo 2022)"
+            }
+        }
+    }
+]

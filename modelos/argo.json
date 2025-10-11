@@ -1,0 +1,108 @@
+[
+    {
+        "id": "argo-drive-1-0",
+        "model": "Fiat Argo (0km)",
+        "version": "Drive 1.0",
+        "price": "R$ 86.490",
+        "details": {
+            "Motor": "1.0 Firefly de 75 cv",
+            "Consumo (G)": "13.4 km/l",
+            "Porta-malas": "300 L",
+            "Itens de Série": "Adiciona multimídia 7\", volante multifuncional, USB traseiro"
+        },
+        "scores": {
+            "desempenho": 5,
+            "consumo": 9,
+            "seguranca": 5,
+            "conforto": 7,
+            "tecnologia": 7
+        },
+        "color": "#2563EB",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.0 Firefly, 3 cilindros",
+                "Potência máxima (cv)": "75 (E) / 71 (G) @ 6.000 rpm",
+                "Torque (kgf.m)": "10,7 (E) / 10,0 (G) @ 3.250 rpm",
+                "Transmissão": "Manual de 5 marchas"
+            },
+            "consumo": {
+                "Urbano (km/l)": "9,6 (E) / 13,4 (G)",
+                "Eficiência energética": "1,49 MJ/km",
+                "Peso": "1.105 kg"
+            },
+            "dimensoes": {
+                "Comprimento": "3.998 mm",
+                "Largura": "1.724 mm",
+                "Altura": "1.501 mm",
+                "Entre-eixos": "2.521 mm",
+                "Porta-malas (VDA)": "300 L",
+                "Altura livre do solo": "155 mm"
+            },
+            "tecnologia": {
+                "Conectividade": "Uconnect 7\" com Apple CarPlay/Android Auto",
+                "Câmeras": "Sensor de estacionamento traseiro"
+            },
+            "conforto": {
+                "Adicionais": "Volante multifuncional"
+            },
+            "seguranca": {
+                "Sistemas Obrigatórios": "2 Airbags, ABS, ESC, ISOFIX",
+                "Sistemas Complementares": "HSA",
+                "Certificações de Segurança": "0 estrelas (Latin NCAP - protocolo 2021)"
+            }
+        }
+    },
+    {
+        "id": "argo-trekking-1-3",
+        "model": "Fiat Argo (0km)",
+        "version": "Trekking 1.3",
+        "price": "R$ 94.990",
+        "details": {
+            "Motor": "1.3 Firefly de 107 cv",
+            "Consumo (G)": "12.6 km/l",
+            "Porta-malas": "300 L",
+            "Itens de Série": "Visual aventureiro, suspensão elevada, pneus de uso misto"
+        },
+        "scores": {
+            "desempenho": 7,
+            "consumo": 8,
+            "seguranca": 6,
+            "conforto": 7,
+            "tecnologia": 7
+        },
+        "color": "#3B82F6",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.3 Firefly, 4 cilindros",
+                "Potência máxima (cv)": "107 (E) / 98 (G) @ 6.250 rpm",
+                "Torque (kgf.m)": "13,7 (E) / 13,2 (G) @ 3.500 rpm",
+                "Transmissão": "Manual de 5 marchas"
+            },
+            "consumo": {
+                "Urbano (km/l)": "9,1 (E) / 12,6 (G)",
+                "Eficiência energética": "1,62 MJ/km",
+                "Peso": "1.140 kg"
+            },
+            "dimensoes": {
+                "Comprimento": "3.998 mm",
+                "Largura": "1.724 mm",
+                "Altura": "1.568 mm",
+                "Entre-eixos": "2.521 mm",
+                "Porta-malas (VDA)": "300 L",
+                "Altura livre do solo": "210 mm"
+            },
+            "tecnologia": {
+                "Conectividade": "Uconnect 7\"",
+                "Câmeras": "Câmera de ré"
+            },
+            "conforto": {
+                "Adicionais": "Suspensão elevada"
+            },
+            "seguranca": {
+                "Sistemas Obrigatórios": "2 Airbags, ABS, ESC, ISOFIX",
+                "Sistemas Complementares": "HSA",
+                "Certificações de Segurança": "0 estrelas (Latin NCAP - protocolo 2021)"
+            }
+        }
+    }
+]

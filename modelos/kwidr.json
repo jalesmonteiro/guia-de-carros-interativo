@@ -1,0 +1,56 @@
+[
+    {
+        "id": "kwid-outsider",
+        "model": "Renault Kwid (0km)",
+        "version": "Outsider 1.0",
+        "price": "R$ 79.990",
+        "details": {
+            "Motor": "1.0 SCe de 71 cv",
+            "Consumo (G)": "15.3 km/l",
+            "Porta-malas": "290 L",
+            "Itens de Série": "Visual aventureiro, multimídia 8\", 4 airbags, câmera de ré"
+        },
+        "scores": {
+            "desempenho": 4,
+            "consumo": 10,
+            "seguranca": 6,
+            "conforto": 4,
+            "tecnologia": 6
+        },
+        "color": "#F97316",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.0 SCe, 3 cilindros",
+                "Potência máxima (cv)": "71 (E) / 68 (G) @ 5.500 rpm",
+                "Torque (kgf.m)": "10,0 (E) / 9,4 (G) @ 4.250 rpm",
+                "Transmissão": "Manual de 5 marchas"
+            },
+            "consumo": {
+                "Urbano (km/l)": "10,8 (E) / 15,3 (G)",
+                "Rodoviário (km/l)": "11,0 (E) / 15,7 (G)",
+                "Eficiência energética": "1,44 MJ/km",
+                "Peso": "820 kg"
+            },
+            "dimensoes": {
+                "Comprimento": "3.680 mm",
+                "Largura": "1.579 mm",
+                "Altura": "1.479 mm",
+                "Entre-eixos": "2.423 mm",
+                "Porta-malas (VDA)": "290 L",
+                "Altura livre do solo": "185 mm"
+            },
+            "tecnologia": {
+                "Conectividade": "Media Evolution 8\" com Apple CarPlay/Android Auto",
+                "Câmeras": "Câmera de ré"
+            },
+            "conforto": {
+                "Adicionais": "Visual aventureiro"
+            },
+            "seguranca": {
+                "Sistemas Obrigatórios": "4 Airbags (frontais e laterais), ABS, ESC, ISOFIX",
+                "Sistemas Complementares": "Assistente de partida em rampa (HSA)",
+                "Certificações de Segurança": "1 estrela (Latin NCAP - protocolo 2022)"
+            }
+        }
+    }
+]

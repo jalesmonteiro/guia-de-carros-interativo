@@ -1,0 +1,61 @@
+[
+    {
+        "id": "gol-g5",
+        "model": "VW Gol G5 (2008)",
+        "version": "1.0 VHT (Valor Corrigido)",
+        "price": "~ R$ 77.700",
+        "details": {
+            "Motor": "1.0 de 76 cv",
+            "Consumo (G)": "12.1 km/l",
+            "Porta-malas": "285 L",
+            "Itens de Série": "Básico (sem ar ou direção hidráulica de série)"
+        },
+        "scores": {
+            "desempenho": 4,
+            "consumo": 7,
+            "seguranca": 2,
+            "conforto": 3,
+            "tecnologia": 1
+        },
+        "color": "#6B7280",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.0 VHT, 4 cilindros, 8 válvulas",
+                "Potência máxima (cv)": "76 (E) / 72 (G) @ 5.750 rpm",
+                "Torque (kgf.m)": "10,6 (E) / 9,7 (G) @ 4.250 rpm",
+                "Tipo de alimentação": "Aspirado",
+                "Transmissão": "Manual de 5 marchas",
+                "Aceleração 0-100 km/h": "12,9 s",
+                "Velocidade máxima": "169 km/h"
+            },
+            "consumo": {
+                "Urbano (km/l)": "8,8 (E) / 12,1 (G)",
+                "Rodoviário (km/l)": "10,9 (E) / 14,3 (G)",
+                "Capacidade do tanque": "55 L",
+                "Peso do veículo": "944 kg"
+            },
+            "dimensoes": {
+                "Comprimento": "3.899 mm",
+                "Largura": "1.656 mm",
+                "Altura": "1.464 mm",
+                "Entre-eixos": "2.465 mm",
+                "Porta-malas (VDA)": "285 L",
+                "Altura livre do solo": "154 mm"
+            },
+            "tecnologia": {
+                "Conectividade": "Rádio simples (opcional)",
+                "Sistemas Eletrônicos": "Arquitetura distribuída (ECUs múltiplas)"
+            },
+            "conforto": {
+                "Ajustes do banco": "Manual (distância e inclinação)",
+                "Capacidade": "5 passageiros"
+            },
+            "seguranca": {
+                "Sistemas Obrigatórios": "Freios a disco (D) e tambor (T). ABS opcional em anos posteriores.",
+                "Airbags": "Não disponíveis de série",
+                "Estrutura da carroceria": "Aço convencional com zonas de deformação programada",
+                "Certificações de Segurança": "Não avaliado pelo Latin NCAP na época"
+            }
+        }
+    }
+]
