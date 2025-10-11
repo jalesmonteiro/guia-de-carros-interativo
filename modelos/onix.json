@@ -1,0 +1,299 @@
+[
+    {
+        "id": "onix-1-0",
+        "model": "Chevrolet Onix (0km)",
+        "version": "1.0",
+        "price": "R$ 87.790",
+        "details": {
+            "Motor": "1.0 Aspirado de 82 cv",
+            "Consumo (G)": "13.3 km/l",
+            "Porta-malas": "303 L",
+            "Itens de Série": "6 airbags, ar, direção elétrica, rádio com Bluetooth, controle de estabilidade"
+        },
+        "scores": {
+            "desempenho": 6,
+            "consumo": 10,
+            "seguranca": 8,
+            "conforto": 6,
+            "tecnologia": 4
+        },
+        "color": "#DC2626",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.0 Aspirado, 3 cilindros",
+                "Potência máxima (cv)": "82 (E) / 78 (G) @ 6.400 rpm",
+                "Torque (kgf.m)": "10,6 (E) / 9,6 (G) @ 4.100 rpm",
+                "Transmissão": "Manual de 6 marchas"
+            },
+            "consumo": {
+                "Urbano (km/l)": "9,4 (E) / 13,3 (G)",
+                "Rodoviário (km/l)": "11,5 (E) / 16,6 (G)",
+                "Peso": "1.037 kg"
+            },
+            "dimensoes": {
+                "Comprimento": "4.163 mm",
+                "Largura": "1.730 mm",
+                "Altura": "1.476 mm",
+                "Entre-eixos": "2.551 mm",
+                "Porta-malas (VDA)": "303 L",
+                "Altura livre do solo": "127 mm"
+            },
+            "tecnologia": {
+                "Conectividade": "Rádio AM/FM com Bluetooth"
+            },
+            "conforto": {
+                "Adicionais": "Ar-condicionado, Direção Elétrica Progressiva"
+            },
+            "seguranca": {
+                "Sistemas Obrigatórios": "6 Airbags (frontais, laterais e de cortina), ABS, ESC, ISOFIX",
+                "Sistemas Complementares": "Assistente de partida em rampa (HSA)",
+                "Certificações de Segurança": "5 estrelas (Latin NCAP - protocolo antigo)"
+            }
+        }
+    },
+    {
+        "id": "onix-lt-1-0",
+        "model": "Chevrolet Onix (0km)",
+        "version": "LT 1.0",
+        "price": "R$ 95.050",
+        "details": {
+            "Motor": "1.0 Aspirado de 82 cv",
+            "Consumo (G)": "13.3 km/l",
+            "Porta-malas": "303 L",
+            "Itens de Série": "Adiciona MyLink 8\" sem fio, USB traseiro, retrovisores elétricos"
+        },
+        "scores": {
+            "desempenho": 6,
+            "consumo": 10,
+            "seguranca": 8,
+            "conforto": 7,
+            "tecnologia": 7
+        },
+        "color": "#0284C7",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.0 Aspirado, 3 cilindros",
+                "Potência máxima (cv)": "82 (E) / 78 (G) @ 6.400 rpm"
+            },
+            "consumo": {
+                "Urbano (km/l)": "9,4 (E) / 13,3 (G)",
+                "Rodoviário (km/l)": "11,5 (E) / 16,6 (G)"
+            },
+            "dimensoes": {
+                "Comprimento": "4.163 mm",
+                "Largura": "1.730 mm",
+                "Altura": "1.476 mm",
+                "Entre-eixos": "2.551 mm",
+                "Porta-malas (VDA)": "303 L",
+                "Altura livre do solo": "127 mm"
+            },
+            "tecnologia": {
+                "Conectividade": "MyLink 8\" com Apple CarPlay/Android Auto sem fio"
+            },
+            "conforto": {
+                "Adicionais": "Portas USB para o banco traseiro"
+            },
+            "seguranca": {
+                "Sistemas Obrigatórios": "6 Airbags, ABS, ESC, ISOFIX",
+                "Sistemas Complementares": "HSA"
+            }
+        }
+    },
+    {
+        "id": "onix-ltz-turbo-at",
+        "model": "Chevrolet Onix (0km)",
+        "version": "LTZ Turbo AT",
+        "price": "R$ 115.390",
+        "details": {
+            "Motor": "1.0 Turbo de 116 cv",
+            "Consumo (G)": "12.3 km/l",
+            "Porta-malas": "303 L",
+            "Itens de Série": "Câmbio AT, rodas 16\", chave presencial, piloto automático"
+        },
+        "scores": {
+            "desempenho": 8,
+            "consumo": 8,
+            "seguranca": 8,
+            "conforto": 8,
+            "tecnologia": 8
+        },
+        "color": "#475569",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.0 Turbo, 3 cilindros",
+                "Potência máxima (cv)": "116 (E/G) @ 5.500 rpm",
+                "Torque (kgf.m)": "16,8 (E) / 16,3 (G) @ 2.000 rpm",
+                "Transmissão": "Automática de 6 marchas"
+            },
+            "consumo": {
+                "Urbano (km/l)": "8,6 (E) / 12,3 (G)",
+                "Rodoviário (km/l)": "10,8 (E) / 15,1 (G)",
+                "Peso": "1.113 kg"
+            },
+            "dimensoes": {
+                "Comprimento": "4.163 mm",
+                "Largura": "1.730 mm",
+                "Altura": "1.476 mm",
+                "Entre-eixos": "2.551 mm",
+                "Porta-malas (VDA)": "303 L"
+            },
+            "tecnologia": {
+                "Conectividade": "MyLink 8\", OnStar + Wi-Fi",
+                "Sistemas Eletrônicos": "Chave presencial, Partida por botão"
+            },
+            "conforto": {
+                "Adicionais": "Piloto automático, Volante com revestimento premium"
+            },
+            "seguranca": {
+                "Sistemas Obrigatórios": "6 Airbags, ABS, ESC, ISOFIX",
+                "Sistemas Complementares": "HSA, Sensor de estacionamento traseiro"
+            }
+        }
+    },
+    {
+        "id": "onix-rs-turbo-at",
+        "model": "Chevrolet Onix (0km)",
+        "version": "RS Turbo AT",
+        "price": "R$ 117.890",
+        "details": {
+            "Motor": "1.0 Turbo de 116 cv",
+            "Consumo (G)": "12.3 km/l",
+            "Porta-malas": "303 L",
+            "Itens de Série": "Visual esportivo, faróis tipo projetor, interior com detalhes em vermelho"
+        },
+        "scores": {
+            "desempenho": 8,
+            "consumo": 8,
+            "seguranca": 8,
+            "conforto": 8,
+            "tecnologia": 8
+        },
+        "color": "#991B1B",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.0 Turbo, 3 cilindros",
+                "Potência máxima (cv)": "116 (E/G) @ 5.500 rpm"
+            },
+            "consumo": {
+                "Urbano (km/l)": "8,6 (E) / 12,3 (G)",
+                "Rodoviário (km/l)": "10,8 (E) / 15,1 (G)"
+            },
+            "dimensoes": {
+                "Comprimento": "4.163 mm",
+                "Largura": "1.730 mm",
+                "Altura": "1.476 mm",
+                "Entre-eixos": "2.551 mm",
+                "Porta-malas (VDA)": "303 L"
+            },
+            "tecnologia": {
+                "Conectividade": "MyLink 8\", OnStar + Wi-Fi"
+            },
+            "conforto": {
+                "Adicionais": "Acabamentos internos e externos exclusivos da versão RS"
+            },
+            "seguranca": {
+                "Iluminação": "Faróis tipo projetor com DRL em LED",
+                "Sistemas Obrigatórios": "6 Airbags, ABS, ESC, ISOFIX"
+            }
+        }
+    },
+    {
+        "id": "onix-premier-turbo-at",
+        "model": "Chevrolet Onix (0km)",
+        "version": "Premier Turbo AT",
+        "price": "R$ 123.050",
+        "details": {
+            "Motor": "1.0 Turbo de 116 cv",
+            "Consumo (G)": "12.3 km/l",
+            "Porta-malas": "303 L",
+            "Itens de Série": "Alerta de ponto cego, ar digital, Easy Park, carregador sem fio"
+        },
+        "scores": {
+            "desempenho": 8,
+            "consumo": 8,
+            "seguranca": 9,
+            "conforto": 9,
+            "tecnologia": 9
+        },
+        "color": "#0369A1",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.0 Turbo, 3 cilindros",
+                "Potência máxima (cv)": "116 (E/G) @ 5.500 rpm"
+            },
+            "consumo": {
+                "Urbano (km/l)": "8,6 (E) / 12,3 (G)",
+                "Rodoviário (km/l)": "10,8 (E) / 15,1 (G)"
+            },
+            "dimensoes": {
+                "Comprimento": "4.163 mm",
+                "Largura": "1.730 mm",
+                "Altura": "1.476 mm",
+                "Entre-eixos": "2.551 mm",
+                "Porta-malas (VDA)": "303 L"
+            },
+            "tecnologia": {
+                "Sistemas de Assistência (ADAS)": "Assistente de estacionamento (Easy Park)",
+                "Sistemas Eletrônicos": "Carregador de celular por indução"
+            },
+            "conforto": {
+                "Adicionais": "Ar-condicionado digital",
+                "Materiais": "Bancos com revestimento premium"
+            },
+            "seguranca": {
+                "Sistemas Complementares": "Alerta de ponto cego",
+                "Sistemas Obrigatórios": "6 Airbags, ABS, ESC, ISOFIX"
+            }
+        }
+    },
+    {
+        "id": "onix-100-anos-turbo-at",
+        "model": "Chevrolet Onix (0km)",
+        "version": "100 Anos Turbo AT",
+        "price": "R$ 125.590",
+        "details": {
+            "Motor": "1.0 Turbo de 116 cv",
+            "Consumo (G)": "12.3 km/l",
+            "Porta-malas": "303 L",
+            "Itens de Série": "Edição especial com visual exclusivo, baseado na versão Premier"
+        },
+        "scores": {
+            "desempenho": 8,
+            "consumo": 8,
+            "seguranca": 9,
+            "conforto": 9,
+            "tecnologia": 9
+        },
+        "color": "#0A3A6B",
+        "fullDetails": {
+            "desempenho": {
+                "Motor e Potência": "1.0 Turbo, 3 cilindros",
+                "Potência máxima (cv)": "116 (E/G) @ 5.500 rpm"
+            },
+            "consumo": {
+                "Urbano (km/l)": "8,6 (E) / 12,3 (G)",
+                "Rodoviário (km/l)": "10,8 (E) / 15,1 (G)"
+            },
+            "dimensoes": {
+                "Comprimento": "4.163 mm",
+                "Largura": "1.730 mm",
+                "Altura": "1.476 mm",
+                "Entre-eixos": "2.551 mm",
+                "Porta-malas (VDA)": "303 L"
+            },
+            "tecnologia": {
+                "Sistemas de Assistência (ADAS)": "Assistente de estacionamento (Easy Park)",
+                "Sistemas Eletrônicos": "Carregador de celular por indução"
+            },
+            "conforto": {
+                "Adicionais": "Ar-condicionado digital, logos e emblemas '100 Anos', acabamento interno exclusivo",
+                "Materiais": "Bancos com revestimento premium em dois tons"
+            },
+            "seguranca": {
+                "Sistemas Complementares": "Alerta de ponto cego",
+                "Sistemas Obrigatórios": "6 Airbags, ABS, ESC, ISOFIX"
+            }
+        }
+    }
+]
+    
