@@ -235,35 +235,60 @@
 
             function updateChart() {
                 const selectedIDs = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.dataset.id);
-                const selectedCars = comparisonData.filter(car => selectedIDs.includes(car.id));
 
-                const datasets = selectedCars.map(car => ({
-                    label: `${car.model.replace('(0km)','').replace('(2008)','')} ${car.version.split(' ')[0]}`,
-                    data: Object.values(car.scores),
-                    borderColor: car.color,
-                    backgroundColor: `${car.color}33`,
-                    pointBackgroundColor: car.color,
-                    pointBorderColor: '#fff',
-                    pointHoverBackgroundColor: '#fff',
-                    pointHoverBorderColor: car.color,
-                    borderWidth: 2,
-                }));
+                const createDatasetObject = (car) => {
+                    return {
+                        id: car.id,
+                        label: `${car.model.replace('(0km)','').replace('(2008)','')} ${car.version.split(' ')[0]}`,
+                        data: Object.values(car.scores),
+                        borderColor: car.color,
+                        backgroundColor: `${car.color}33`,
+                        pointBackgroundColor: car.color,
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: car.color,
+                        borderWidth: 2,
+                    };
+                };
 
                 if (comparisonChart) {
-                    comparisonChart.data.datasets = datasets;
+                    const currentIDs = comparisonChart.data.datasets.map(ds => ds.id);
+
+                    // Remove datasets that are no longer selected
+                    for (let i = currentIDs.length - 1; i >= 0; i--) {
+                        if (!selectedIDs.includes(currentIDs[i])) {
+                            comparisonChart.data.datasets.splice(i, 1);
+                        }
+                    }
+
+                    // Add datasets for newly selected cars
+                    const newCurrentIDs = comparisonChart.data.datasets.map(ds => ds.id);
+                    selectedIDs.forEach(id => {
+                        if (!newCurrentIDs.includes(id)) {
+                            const carToAdd = comparisonData.find(car => car.id === id);
+                            if (carToAdd) {
+                                comparisonChart.data.datasets.push(createDatasetObject(carToAdd));
+                            }
+                        }
+                    });
+
                     comparisonChart.update();
                 } else {
+                    // First time: create the chart
+                    const selectedCars = comparisonData.filter(car => selectedIDs.includes(car.id));
+                    const initialDatasets = selectedCars.map(createDatasetObject);
+                    
                     const ctx = document.getElementById('comparisonChart').getContext('2d');
                     comparisonChart = new Chart(ctx, {
                         type: 'radar',
                         data: {
                             labels: ['Desempenho', 'Consumo', 'Segurança', 'Conforto', 'Tecnologia'],
-                            datasets: datasets
+                            datasets: initialDatasets
                         },
                         options: {
                             responsive: true,
                             maintainAspectRatio: false,
-                            scales: { r: { angleLines: { color: '#e5e7eb' }, grid: { color: '#e5e7eb' }, pointLabels: { font: { size: 12, weight: '500' }, color: '#4b5563' }, ticks: { beginAtZero: true, max: 10, stepSize: 2, backdropColor: '#ffffff' }}},
+                            scales: { r: { min: 0, max: 10, angleLines: { color: '#e5e7eb' }, grid: { color: '#e5e7eb' }, pointLabels: { font: { size: 12, weight: '500' }, color: '#4b5563' }, ticks: { stepSize: 2, backdropColor: '#ffffff' }}},
                             plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, boxWidth: 8, font: { size: 11 } } } }
                         }
                     });
